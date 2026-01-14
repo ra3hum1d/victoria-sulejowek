@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+
+
+
+
+
+
+/* ------------------js----------------- */
+
+
+
+
+
+
+
+.header {
+  transition: background 0.25s ease, backdrop-filter 0.25s ease, top 0.25s ease;
+}
+
+
+.header.header-scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.35); 
+  backdrop-filter: blur(8px);
+}
+
+
+body.has-fixed-header {
+  padding-top: 150px; 
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  
+}
+
+
+
+/* --------header-------- */
+.header{
+  
+
+
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+
+    width: 100%;
+    height: 150px;
+    background-color: black ;
+}
+
+.header-list-link{
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 32px;
+    color: rgb(192, 192, 192);
+    transition: 0.3s;
+}
+
+.header-list-link:hover{
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+
+.header-list{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    position: absolute;
+    
+    margin-left: 560px;
+    z-index: 99999;
+}
+
+
+
+.head-logo-liga{
+    z-index: 2;
+position: absolute;
+right: 40px;
+width: 80px;
+
+
+}
+/* ---------------------- */
+
+
+.hero-section {
+  width: 100%;
+  height: 750px;
+  float: right;
+  overflow: hidden;
+  margin-left: 70px;
+}
+
+
+
+
+
+
+.hero-swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px 0 0 4px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 90px;
+}
+
+.hero-swiper::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: 4px 0 0 4px;
+  box-shadow: inset 0 0 150px rgba(0,0,0,0.6);
+  z-index: 10; 
+}
+
+.hero-swiper .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.2); 
+  z-index: 10;
+  pointer-events: none;
+  border-radius: 4px 0 0 4px;
+}
+
+
+
+
+
+
+
+.hero-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+    mix-blend-mode: multiply; /* потемнює зображення */
+}
+
+
+
+.swiper-pagination-bullet {
+  background: white;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 40px;
+  height: 6px;
+  background: rgba(0,0,0,0.5);
+  margin: 0 5px !important;
+  transition: 0.3s;
+}
+
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 40px;
+  height: 6px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 3px;
+  margin: 0 5px !important;
+  transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.hero-aside{
+    display: flex;
+  justify-content: center;
+  float: left;
+  height: 900px;
+  background-color: black;
+
+  align-items: center;
+
+
+
+
+
+  flex-direction: column;
+}
+
+
+
+
+
+.hero-match-wrap-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  
+
+}
+
+
+
+
+
+
+
+.hero-match-container{
+  
+  margin-top: -60px;
+  width: 400px;
+  height: 460px;
+  background-color: rgb(15, 15, 15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hero-match-inside{
+  
+  
+  border: 0.5px solid white;
+  width: 380px;
+  height: 440px;
+  background-color: rgb(15, 15, 15);
+}
+
+.stadion-svg{
+  width: 100px;
+  fill: white;
+  margin-left: 140px;
+
+}
+
+.ball-svg{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 90px;
+  fill: white;
+  margin-left: 140px;
+}
+
+.next-match-line{
+  border: 0.1px solid white;
+
+  
+}
+
+
+.next-match-title{
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+
+.next-match-paragraph{
+    display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+.next-match-paragraph-first{
+      display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* next-match-junior */
+
+
+.hero-match-container-jun{
+  margin-top:20px;
+
+  width: 395px;
+  height: 365px;
+  background-color: rgb(15, 15, 15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero-match-inside-jun{
+  border: 0.5px solid white;
+  width: 380px;
+  height: 350px;
+  background-color: rgb(15, 15, 15);
+}
+
+
+.next-match-title-jun{
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+.next-match-paragraph-first-jun{
+    display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+
+
+
+
+.next-match-paragraph-jun{
+    display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+
+
+.stadion-svg-jun{
+  width: 70px;
+  fill: white;
+  margin-left: 155px;
+}
+
+.ball-svg-jun{
+    margin-top: 20px;
+  margin-bottom: 10px;
+  width: 60px;
+  fill: white;
+  margin-left: 160px;
+}
+
+/* ------------slider---------- */
+
+
+
+
+.bg-header-img{
+  position: absolute;
+  right: 0px;
+}
+
+.liga-maz{
+  z-index: 2;
+  position: absolute;
+  right: 50px;
+  width: 80px;
+}
+
+.srebrny-cert-img{
+    z-index: 2;
+  position: absolute;
+  right: 230px;
+  width: 120px;
+}
+
+
+.logo-victoria{
+  width: 150px;
+  margin-top: 0px;
+  margin-left: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------- */
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  background-color: black;
+}
+
+.sul-herb{
+  width: 100px;
+}
+
+.map-sul{
+  float: right;
+  margin-top: 100px;
+  margin-right: 40px;
+  margin-left: 150px;
+  padding: 10px;
+
+}
+
+.main-map-title{
+  font-family: Bebas Neue;
+  margin-top: 100px;
+  font-size: 60px;
+  color: white;
+ 
+}
+
+
+.title-wrap{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-line{
+  width: 1200px;
+  margin-top: 100px;
+}
+
+
+.klub-info{
+    font-family: Bebas Neue;
+  font-size: 30px;
+  color: rgb(192, 192, 192);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.klub-info:hover{
+    font-family: Bebas Neue;
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+    transition: 0.3s;
+}
+
+.google-map{
+  display: flex;
+}
+
+.klub-list{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+
+
+
+}
+
+.klub-title{
+  font-family: Bebas Neue;
+  font-size: 34px;
+  color: white;
+
+  text-decoration: none;
+    transition: 0.3s;
+    margin-bottom: 80px;
+    margin-top: 40px;
+}
+
+.klub-info-container{
+  margin-top: 109px;
+  margin-left: 40px;
+  width: 700px;
+  height: 540px;
+  padding: 30px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+/* ------------video section ----------- */
+
+.video-cont{
+  opacity: 0.5;
+  width: 100%;
+  height: 900px;
+  background-image: url("./img/team-after-match.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.play-video-button{
+  width: 150px;
+  height: 70px;
+  border: 0px;
+  background-color: black;
+  opacity: 0.78;
+  color: white;
+
+  font-family: Bebas Neue;
+  font-size: 40px;
+  
+  
+}
+
+
+
+
+/* ------------------------------- */
+
+
+
+
+/* ----------new-info--------------- */
+
+
+
+.info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+  height: 1000px;
+}
+
+
+.info-section-title-cont{
+  display: flex;
+  margin-top: 50px;
+  gap: 40px;
+}
+
+.info-section-line{
+  width: 300px;
+  height: 0px;
+  margin-top: 15px;
+}
+
+.info-section-title{
+  color: white;
+  font-family: Bebas Neue;
+  font-size: 40px;
+}
+
+
+
+
+
+
+
+
+.footer{
+  height: 400px;
+  width: 100%;
+
+}
+
+.footer-line{
+  width: 100%;
+  float: inline-start;
+}
+
+.footer-list-link{
+      text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 24px;
+    color: rgb(192, 192, 192);
+    transition: 0.3s;
+}
+
+.footer-container{
+  width: 100%;
+  display: flex;
+  gap: 200px;
+}
+
+.footer-list{
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+/* ------------------------------------ */
