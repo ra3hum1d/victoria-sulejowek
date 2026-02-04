@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function onScroll() {
     if (window.scrollY > THRESHOLD) {
       header.classList.add('header-scrolled');
-      document.body.classList.add('has-fixed-header');
+      // document.body.classList.add('has-fixed-header');
     } else {
       header.classList.remove('header-scrolled');
-      document.body.classList.remove('has-fixed-header');
+      // document.body.classList.remove('has-fixed-header');
     }
   }
 
