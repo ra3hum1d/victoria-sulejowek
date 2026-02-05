@@ -74,3 +74,230 @@ swiperHero.on('paginationClick', function(swiper, e) {
 
 
 
+
+
+
+
+
+
+// async function initVerticalSponsorSlider() {
+//     const wrapper = document.getElementById('sponsor-list');
+    
+//     try {
+//         // Загружаем данные из вашего WordPress
+//         const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/sponsorzy?_embed');
+//         if (!response.ok) return;
+
+//         const sponsors = await response.json();
+//         if (sponsors.length === 0) return;
+
+//         wrapper.innerHTML = ''; 
+
+//         sponsors.forEach(sponsor => {
+//             let imgUrl = '';
+//             // Проверка наличия картинки в Featured Media
+//             if (sponsor._embedded && sponsor._embedded['wp:featuredmedia']) {
+//                 imgUrl = sponsor._embedded['wp:featuredmedia'][0].source_url;
+//             }
+
+//             if (imgUrl) {
+//                 wrapper.innerHTML += `
+//                     <div class="swiper-slide">
+//                         <img src="${imgUrl}" alt="${sponsor.title.rendered}">
+//                     </div>`;
+//             }
+//         });
+
+//         // Инициализация Swiper: строго по одному слайду
+//         new Swiper('.mySponsorSwiper', {
+//             direction: 'vertical',
+//             loop: true,
+//             speed: 1000, // Скорость анимации переключения (1 сек)
+//             autoplay: {
+//                 delay: 2000, // Каждый логотип виден по 3 секунды
+//                 disableOnInteraction: false,
+//             },
+//             slidesPerView: 1, // ВСЕГДА ТОЛЬКО ОДИН
+//             spaceBetween: 0,
+//             allowTouchMove: false
+//         });
+
+//     } catch (error) {
+//         console.error('Ошибка загрузки спонсоров:', error);
+//     }
+// }
+
+// // Запускаем после загрузки окна
+// window.addEventListener('load', initVerticalSponsorSlider);
+
+/**
+ * 1. FUNKCJE POMOCNICZE
+ */
+function decodeHtml(html) {
+    const txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+}
+
+/**
+ * 2. SLIDER SPONSORÓW
+ */
+async function initVerticalSponsorSlider() {
+    const wrapper = document.getElementById('sponsor-list');
+    if (!wrapper) return;
+    
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/sponsorzy?_embed');
+        if (!response.ok) return;
+
+        const sponsors = await response.json();
+        wrapper.innerHTML = ''; 
+
+        sponsors.forEach(sponsor => {
+            let imgUrl = '';
+            if (sponsor._embedded && sponsor._embedded['wp:featuredmedia']) {
+                imgUrl = sponsor._embedded['wp:featuredmedia'][0].source_url;
+            }
+            if (imgUrl) {
+                wrapper.innerHTML += `
+                    <div class="swiper-slide">
+                        <img src="${imgUrl}" alt="${sponsor.title.rendered}">
+                    </div>`;
+            }
+        });
+
+        new Swiper('.mySponsorSwiper', {
+            direction: 'vertical',
+            loop: true,
+            speed: 1000,
+            autoplay: { delay: 2000, disableOnInteraction: false },
+            slidesPerView: 1,
+            spaceBetween: 0,
+            allowTouchMove: false
+        });
+    } catch (e) { 
+        console.error('Błąd ładowania sponsorów:', e); 
+    }
+}
+
+/**
+ * 3. NAZWA MECZU (Drużyny)
+ */
+async function loadNextMatchTitle() {
+    const teamsElement = document.getElementById('match-teams');
+    if (!teamsElement) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/terminarz?per_page=1');
+        const matches = await response.json();
+
+        if (matches && matches.length > 0) {
+            teamsElement.innerText = decodeHtml(matches[0].title.rendered);
+        } else {
+            teamsElement.innerText = "Brak zaplanowanych meczów";
+        }
+    } catch (e) { 
+        console.error('Błąd ładowania nazwy meczu:', e); 
+        teamsElement.innerText = "Błąd ładowania danych";
+    }
+}
+
+/**
+ * 4. MIEJSCE I CZAS (Lokalizacja)
+ */
+async function loadMatchLocation() {
+    const locationElement = document.getElementById('match-location');
+    if (!locationElement) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/nast_pny_mecz?per_page=1&v=' + Math.random());
+        const data = await response.json();
+
+        if (data && data.length > 0) {
+            const rawContent = data[0].content.rendered;
+            const tempDiv = document.createElement("div");
+            tempDiv.innerHTML = rawContent;
+            
+            const cleanText = (tempDiv.innerText || tempDiv.textContent || "").trim();
+
+            setTimeout(() => {
+                if (cleanText.length > 0) {
+                    // ТЕПЕРЬ ТУТ НЕТ ВСТРОЕННЫХ СТИЛЕЙ
+                    locationElement.innerHTML = `<span>${cleanText}</span>`;
+                } else {
+                    locationElement.innerText = "Miejsce i czas zostaną podane wkrótce";
+                }
+            }, 800); 
+        }
+    } catch (e) { 
+        console.error('Błąd ładowania lokalizacji:', e); 
+        locationElement.innerText = "Błąd danych";
+    }
+}
+
+/**
+ * 5. SKRYPTY NAGŁÓWKA I WIDEO
+ */
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('.header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) header.classList.add('header-scrolled');
+            else header.classList.remove('header-scrolled');
+        });
+    }
+
+    const btn = document.querySelector('.play-video-button');
+    const box = document.querySelector('.video-cont');
+    if (btn && box) {
+        btn.addEventListener('click', () => {
+            box.innerHTML = `<iframe width="100%" height="944px" src="https://www.youtube.com/embed/z8gu9TthcAQ?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+        });
+    }
+
+    loadNextMatchTitle();
+});
+
+window.addEventListener('load', () => {
+    initVerticalSponsorSlider();
+    loadMatchLocation();
+});
+
+
+
+
+
+
+
+
+
+// Знаходимо сам фільтр (додаємо крапку!)
+const filter = document.querySelector('.blur-filter');
+// Знаходимо всі кнопки меню
+const menuToggles = document.querySelectorAll('.has-dropdown .link-wrapper');
+
+menuToggles.forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = item.parentElement;
+        
+        // Перемикаємо стан активності для пункту меню (стрілочка/хрестик)
+        parent.classList.toggle('active');
+
+        // Логіка для фільтра: 
+        // Перевіряємо, чи є хоча б одне відкрите меню
+        const anyActive = document.querySelector('.has-dropdown.active');
+        
+        if (anyActive) {
+            filter.classList.add('show'); // Показуємо чорний фон
+        } else {
+            filter.classList.remove('show'); // Ховаємо, якщо все закрито
+        }
+    });
+});
+
+// Додатково: закривати меню при кліку на сам фільтр
+filter.addEventListener('click', () => {
+    document.querySelectorAll('.has-dropdown').forEach(el => el.classList.remove('active'));
+    filter.classList.remove('show');
+});

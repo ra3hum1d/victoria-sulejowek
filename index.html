@@ -15,14 +15,89 @@
         <div class="header-box1">
             <img src="./img/Victoria_Sulejówek.png" alt="" class="header-box1-logo">
         </div>
+
+
+        <div class="blur-filter"></div>
+
+
+
+
+
         <ul class="header-list">
-            <li class="header-list-item"><a href="" class="header-list-link">AKTUALNOŚCI</a></li>
-            <li class="header-list-item"><a href="" class="header-list-link">SENIORZY</a></li>
-            <li class="header-list-item"><a href="" class="header-list-link">KLUB</a></li>
-            <li class="header-list-item"><a href="" class="header-list-link">AKADEMIA</a></li>
+            <li class="header-list-item"><a href="#aktualnosc" class="header-list-link">AKTUALNOŚCI</a></li>
+
+            <li class="header-list-item has-dropdown">
+                <div class="link-wrapper">
+                    <a href="#" class="header-list-link">SENIORZY</a>
+                    <span class="toggle-icon"></span>
+                </div>
+                <ul class="dropdown-menu">
+                    <div class="Seniorzy-cont">
+                        <ul class="Seniorzy-list">
+                            <li>
+                                <h2 class="Seniorzy-list-title">1 ZESPÓŁ</h2>
+                            </li>
+                            <li><a href="" class="Seniorzy-list-link">KADRA</a></li>
+                            <li><a href="" class="Seniorzy-list-link">TRENERZY</a></li>
+                            <li><a href="" class="Seniorzy-list-link">WYNIKI</a></li>
+                            <li><a href="" class="Seniorzy-list-link">TERMINARZ</a></li>
+                            <li><a href="" class="Seniorzy-list-link">TABELA</a></li>
+                        </ul>
+                        <hr class="Seniorzy-btw-line">
+                        <ul class="Seniorzy-list">
+                            <li>
+                                <h2 class="Seniorzy-list-title">2 ZESPÓŁ</h2>
+                            </li>
+                            <li><a href="" class="Seniorzy-list-link">KADRA</a></li>
+                            <li><a href="" class="Seniorzy-list-link">TRENERZY</a></li>
+                            <li><a href="" class="Seniorzy-list-link">WYNIKI</a></li>
+                            <li><a href="" class="Seniorzy-list-link">TERMINARZ</a></li>
+                            <li><a href="" class="Seniorzy-list-link">TABELA</a></li>
+                        </ul>
+
+                </ul>
+                </div>
+
+            </li>
+
+            <li class="header-list-item has-dropdown">
+                <div class="link-wrapper">
+                    <a href="#" class="header-list-link">KLUB</a>
+                    <span class="toggle-icon"></span>
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Історія</a></li>
+                    <li><a href="#">Стадіон</a></li>
+                </ul>
+            </li>
+
+            <li class="header-list-item has-dropdown">
+                <div class="link-wrapper">
+                    <a href="#" class="header-list-link">AKADEMIA</a>
+                    <span class="toggle-icon"></span>
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Історія</a></li>
+                    <li><a href="#">Стадіон</a></li>
+                </ul>
+            </li>
+
+
+
+            </div>
             <li class="header-list-item"><a href="" class="header-list-link">TABELA</a></li>
+
             <li class="header-list-item"><a href="" class="header-list-link">KONTAKT</a></li>
         </ul>
+
+
+
+
+
+
+
+
+
         <div class="header-box2">
             <img src="./img/bg-hero.png" alt="" class="header-box2-bg-header-img">
             <img src="./img/srebrny.jpg" alt="" class="header-box2-srebrny-cert-img">
@@ -32,57 +107,61 @@
 
     <div class="hero-wrap">
 
-        <div class="hero-match-wrap-container"> 
-        <aside class="hero-aside">
+        <div class="hero-match-wrap-container">
+            <aside class="hero-aside">
 
-             <div class="hero-match-container">
-                <div class="hero-match-inside">
-                    <img src="./svg/soccer-ball-svgrepo-com .svg" alt="" class="ball-svg">
-                    <h2 class="next-match-title">Następny mecz</h2>
-                    <P class="next-match-paragraph-first">FC WESOLA - PRAGA POLNOC</P>
+                <div class="hero-match-container">
+                    <div class="hero-match-inside">
+                        <img src="./svg/soccer-ball-svgrepo-com .svg" alt="" class="ball-svg">
+                        <h2 class="next-match-title">Następny mecz</h2>
+                        <div id="next-match-container">
+                        <h3 id="match-teams" class="next-match-title-inside">Ładowanie Meczu...</h3>
+                        </div>
 
-                    <hr class="next-match-line">
-
-                    
-                    <img src="./svg/football-field-stadium-svgrepo-com.svg" alt="" class="stadion-svg">
-                    <h2 class="next-match-title">Miejsce i czas </h2>
-                    <p class="next-match-paragraph">ul.krasinskiego 18:30 11.01.2025</p>
+                        <hr class="next-match-line">
 
 
-
-                </div>
-
-            </div> 
+                        <img src="./svg/football-field-stadium-svgrepo-com.svg" alt="" class="stadion-svg">
+                        <h2 class="next-match-title">Miejsce i czas </h2>
+                        <div class="next-match-location">
+                        <p id="match-location" class="next-match-title-inside">Ładowanie Miejsca i czasu rozgrywki...</p>
+                        </div>
 
 
 
-
-
-            <!-- kids-sec-cont -->
-            
-            <div class="hero-match-container-jun">
-                <div class="hero-match-inside-jun">
-                    <img src="./svg/soccer-ball-svgrepo-com .svg" alt="" class="ball-svg-jun">
-                    <h2 class="next-match-title-jun">Następny mecz drużyny junior</h2>
-                    <p class="next-match-paragraph-first-jun">FC WESOLA - PRAGA POLNOC</P>
-
-                    <hr class="next-match-line">
-
-                    
-                    <img src="./svg/football-field-stadium-svgrepo-com.svg" alt="" class="stadion-svg-jun">
-                    <h2 class="next-match-title-jun">Miejsce i czas</h2>
-                    <p class="next-match-paragraph-jun">ul.krasinskiego 18:30 11.01.2025</p>
-
-
+                    </div>
 
                 </div>
 
-            </div>
 
 
-            <!-- ///////////// -->
 
-        </aside>
+
+                <!-- kids-sec-cont -->
+
+                <div class="hero-match-container-jun">
+                    <div class="hero-match-inside-jun">
+                        <img src="./svg/soccer-ball-svgrepo-com .svg" alt="" class="ball-svg-jun">
+                        <h2 class="next-match-title-jun">Następny mecz drużyny junior</h2>
+                        <p class="next-match-paragraph-first-jun">FC WESOLA - PRAGA POLNOC</p>
+
+                        <hr class="next-match-line">
+
+
+                        <img src="./svg/football-field-stadium-svgrepo-com.svg" alt="" class="stadion-svg-jun">
+                        <h2 class="next-match-title-jun">Miejsce i czas</h2>
+                        <p class="next-match-paragraph-jun">ul.krasinskiego 18:30 11.01.2025</p>
+
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- ///////////// -->
+
+            </aside>
 
 
 
@@ -185,28 +264,30 @@
 
 
 
-                         <div class="aktualnosc">
-                          
-                          <div class="col-md-12" style="padding:0px !important;">
+            <div class="aktualnosc" id="aktualnosc">
 
-                             <div class="col-md-4" style="padding:0px !important;">
-                                <img src="images/akt-1.png">
-                             </div>
+                <div class="col-md-12" style="padding:0px !important;">
 
-                              <div class="col-md-7">
-                                <h3>Pewna wygrana z Piasecznem</h3>
-                                <p>Mecz pierwszej drużyny Victorii z MKS Piaseczno nie mógł zacząć się lepiej dla naszego zespołu. Już w 3 minucie gry, po akcji lewą strona boiska i dograniu w pole karne, strzał Wojtka Wociala odbił się od bramkarza i poprzeczki...</p>
-                                <br>
-                                <p style="text-align:right; color:#0073ba;">Czytaj więcej</p>
+                    <div class="col-md-4" style="padding:0px !important;">
+                        <img src="images/akt-1.png">
+                    </div>
 
-                              </div>
+                    <div class="col-md-7">
+                        <h3>Pewna wygrana z Piasecznem</h3>
+                        <p>Mecz pierwszej drużyny Victorii z MKS Piaseczno nie mógł zacząć się lepiej dla naszego
+                            zespołu. Już w 3 minucie gry, po akcji lewą strona boiska i dograniu w pole karne, strzał
+                            Wojtka Wociala odbił się od bramkarza i poprzeczki...</p>
+                        <br>
+                        <p style="text-align:right; color:#0073ba;">Czytaj więcej</p>
 
-                          </div>
+                    </div>
+
+                </div>
 
 
 
 
-                        </div>
+            </div>
 
 
 
@@ -233,72 +314,88 @@
 
 
     <footer class="footer">
-<hr class="footer-line">
+        <hr class="footer-line">
 
-<div class="footer-container">
-    <ul class="footer-list">
-        <h2>SENIORZY</h2>
-        <hr style="width: 100px;">
-        <li>
-            <a href="" class="footer-list-link">KADRA</a>
-        </li>
-        <li>
-            <a href="" class="footer-list-link">TRENERZY</a>
-        </li>
-        <li>
-            <a href="" class="footer-list-link">WYNIKI</a>
-        </li>
-        <li>
-            <a href="" class="footer-list-link">TERMINARZ</a>
-        </li>
-        <li>
-            <a href="" class="footer-list-link">TABELA</a>
-        </li>
-    </ul>
-    <ul>
-        <h2>KLUB</h2>
-        <hr>
-        <li>
-            <a href="" class="footer-list-link">KONTAKT</a>
-        </li>
-        <li>
-            <a href="" class="footer-list-link">HISTORIA</a>
-        </li>
-        <li>
-            <a href="" class="footer-list-link">WŁADZE KLUBU</a>
-        </li>
-        <li>
-            <a href="" class="footer-list-link">KLUB STU</a>
-        </li>
-        <a href="" class="footer-list-link">STADION</a>
-        <li>
-            <a href="" class="footer-list-link">SPONSORZY</a>
-        </li>
-    </ul>
-    <ul>
-        <h2>AKADEMIA</h2>
-        <hr>
-        <li>
-            <a href="" class="footer-list-link">AKTUALNOŚCI</a>
-        </li>
-        <li>
-            <a href="" class="footer-list-link">PIŁKARSKIE PRZEDSZKOLE</a>
-        </li>
-        <li>
-            <a href="" class="footer-list-link">INFORMACJE O AKADEMII</a>
-        </li>
-    </ul>
-    <ul>
-        <h2>WAŻNE</h2>
-        <hr>
-        <li>
-            <a href="" class="footer-list-link">REGULAMINY</a>
-        </li>
-        <li>
-            <a href="" class="footer-list-link">POLITYKA PRYWATNOŚCI</a>
-        </li>
-    </ul>
-    </div>
+        <div class="footer-container">
+            <ul class="first-footer-list">
+                <h2 class="footer-list-title footer-list-title-sen">SENIORZY</h2>
+                <hr>
+                <li>
+                    <a href="" class="footer-list-link">KADRA</a>
+                </li>
+                <li>
+                    <a href="" class="footer-list-link">TRENERZY</a>
+                </li>
+                <li>
+                    <a href="" class="footer-list-link">WYNIKI</a>
+                </li>
+                <li>
+                    <a href="" class="footer-list-link">TERMINARZ</a>
+                </li>
+                <li>
+                    <a href="" class="footer-list-link">TABELA</a>
+                </li>
+            </ul>
+            <ul>
+                <h2 class="footer-list-title">KLUB</h2>
+                <hr>
+                <li>
+                    <a href="" class="footer-list-link">KONTAKT</a>
+                </li>
+                <li>
+                    <a href="" class="footer-list-link">HISTORIA</a>
+                </li>
+                <li>
+                    <a href="" class="footer-list-link">WŁADZE KLUBU</a>
+                </li>
+                <li>
+                    <a href="" class="footer-list-link">KLUB STU</a>
+                </li>
+                <a href="" class="footer-list-link">STADION</a>
+                <li>
+                    <a href="" class="footer-list-link">SPONSORZY</a>
+                </li>
+            </ul>
+            <ul>
+                <h2 class="footer-list-title">AKADEMIA</h2>
+                <hr>
+                <li>
+                    <a href="" class="footer-list-link">AKTUALNOŚCI</a>
+                </li>
+                <li>
+                    <a href="" class="footer-list-link">PIŁKARSKIE PRZEDSZKOLE</a>
+                </li>
+                <li>
+                    <a href="" class="footer-list-link">INFORMACJE O AKADEMII</a>
+                </li>
+            </ul>
+            <ul class="footer-list-title-imp">
+                <h2 class="footer-list-title">WAŻNE</h2>
+                <hr>
+                <li>
+                    <a href="" class="footer-list-link">REGULAMINY</a>
+                </li>
+                <li>
+                    <a href="" class="footer-list-link">POLITYKA PRYWATNOŚCI</a>
+                </li>
+            </ul>
+
+
+
+            <div class="footer-container-sponsor">
+                <div class="swiper mySponsorSwiper">
+                    <div class="swiper-wrapper" id="sponsor-list"></div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
     </footer>
 
 
