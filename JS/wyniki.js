@@ -67,6 +67,10 @@ async function initVerticalSponsorSlider() {
     }
 }
 
+window.addEventListener('load', () => {
+    initVerticalSponsorSlider();
+});
+
 
 
 
@@ -100,4 +104,88 @@ menuToggles.forEach(item => {
 filter.addEventListener('click', () => {
     document.querySelectorAll('.has-dropdown').forEach(el => el.classList.remove('active'));
     filter.classList.remove('show');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function loadTeamResults() {
+    const container = document.getElementById('team-results-content');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/pierwsza_druzyna/112?v=' + Math.random());
+        const data = await response.json();
+
+        if (data && data.content && data.content.rendered) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = data.content.rendered;
+
+            // Очищуємо вбудовані стилі та додаємо класи
+            tempDiv.querySelectorAll('p').forEach(p => {
+                p.removeAttribute('style'); 
+                p.classList.add('results-text');
+                
+                // Якщо це заголовок туру (наприклад, 1 KOLEJKA)
+                if (p.querySelector('strong')) {
+                    p.classList.add('round-header');
+                }
+            });
+
+            container.innerHTML = tempDiv.innerHTML;
+        }
+    } catch (e) {
+        console.error('Błąd ładowania wyników:', e);
+    }
+}
+
+
+window.addEventListener('load', () => {
+    loadTeamResults();
 });

@@ -67,6 +67,10 @@ async function initVerticalSponsorSlider() {
     }
 }
 
+window.addEventListener('load', () => {
+    initVerticalSponsorSlider();
+});
+
 
 
 

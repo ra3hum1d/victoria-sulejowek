@@ -67,6 +67,10 @@ async function initVerticalSponsorSlider() {
     }
 }
 
+window.addEventListener('load', () => {
+    initVerticalSponsorSlider();
+});
+
 
 
 
@@ -100,4 +104,118 @@ menuToggles.forEach(item => {
 filter.addEventListener('click', () => {
     document.querySelectorAll('.has-dropdown').forEach(el => el.classList.remove('active'));
     filter.classList.remove('show');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function loadFirstTeamStaff() {
+    const container = document.getElementById('first-team-staff-content');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/pierwsza_druzyna/84?v=' + Math.random());
+        const data = await response.json();
+
+        if (data && data.content && data.content.rendered) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = data.content.rendered;
+
+            tempDiv.querySelectorAll('img').forEach(img => img.classList.add('staff-photo'));
+            tempDiv.querySelectorAll('p').forEach(p => p.classList.add('staff-info'));
+
+            container.innerHTML = tempDiv.innerHTML;
+        }
+    } catch (e) { console.error('Błąd (Staff 1):', e); }
+}
+
+
+window.addEventListener('load', () => {
+    loadFirstTeamStaff();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function loadSecondTeamStaff() {
+    const container = document.getElementById('second-team-staff-content');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/druga_druzyna/144?v=' + Math.random());
+        const data = await response.json();
+
+        if (data && data.content && data.content.rendered) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = data.content.rendered;
+
+            tempDiv.querySelectorAll('img').forEach(img => img.classList.add('second-staff-photo'));
+            tempDiv.querySelectorAll('p').forEach(p => p.classList.add('second-staff-info'));
+
+            container.innerHTML = tempDiv.innerHTML;
+        }
+    } catch (e) { console.error('Błąd (Staff 2):', e); }
+}
+
+
+window.addEventListener('load', () => {
+    loadSecondTeamStaff();
 });

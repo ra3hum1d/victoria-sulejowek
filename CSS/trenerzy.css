@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background-color: #161f30;
   overflow-x: hidden;
 }
 
-.body{
+.body {
   padding-top: 149px;
 }
 
@@ -25,19 +26,20 @@ body.has-fixed-header {
 
 
 .blur-filter {
-  background-color: rgba(0, 0, 0, 0.6); /* Напівпрозорий чорний */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Напівпрозорий чорний */
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
   z-index: 5;
-  
+
   /* Плавність */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
-  
+
   /* Ефект розмиття фону (опціонально) */
   backdrop-filter: blur(4px);
 }
@@ -47,18 +49,19 @@ body.has-fixed-header {
   opacity: 1;
   visibility: visible;
 }
+
 /* ---------------------------------------------- */
 
 /* --------header-------- */
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: 0.3s;
   width: 100%;
   height: 149px;
-  background-color: #1B263B ;
+  background-color: #1B263B;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -66,12 +69,12 @@ body.has-fixed-header {
   /* margin-bottom: 15px; */
 }
 
-.header-list-item{
+.header-list-item {
   margin-right: 24px;
 }
 
 
-.Seniorzy-list-title{
+.Seniorzy-list-title {
   text-decoration: none;
   font-family: Bebas Neue;
   font-size: 27px;
@@ -79,20 +82,20 @@ body.has-fixed-header {
   transition: 0.3s;
 }
 
-.Seniorzy-list-link{
+.Seniorzy-list-link {
   text-decoration: none;
   color: #ffffff;
   font-family: Bebas Neue;
   font-size: 22px;
 }
 
-.Seniorzy-list{
+.Seniorzy-list {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.Seniorzy-btw-line{
+.Seniorzy-btw-line {
   margin-top: 30px;
   margin-bottom: 20px;
 }
@@ -117,17 +120,17 @@ body.has-fixed-header {
 
 
 
-.header.header-scrolled{
+.header.header-scrolled {
   height: 95px;
   opacity: 0.6;
   /* backdrop-filter: blur(8px); */
 }
 
-.hero-wrap.hero-wrap-scrolled{
+.hero-wrap.hero-wrap-scrolled {
   background-color: brown;
 }
 
-.header-list-link{
+.header-list-link {
   text-decoration: none;
   font-family: Bebas Neue;
   font-size: 37px;
@@ -135,7 +138,7 @@ body.has-fixed-header {
   transition: 0.3s;
 }
 
-.header-list-link:hover{
+.header-list-link:hover {
   text-decoration: none;
   font-family: Bebas Neue;
   font-size: 37px;
@@ -143,7 +146,7 @@ body.has-fixed-header {
   transition: 0.3s;
 }
 
-.header-list{
+.header-list {
   display: flex;
   flex-direction: row;
   gap: 50px;
@@ -151,13 +154,14 @@ body.has-fixed-header {
   /* margin-left: 560px; */
   z-index: 99999;
 }
-.header-box1{
+
+.header-box1 {
   width: 9%;
   height: 95%;
   display: flex;
 }
 
-.header-box2{
+.header-box2 {
   /* width: 26%;
   height: 95%;
   display: flex;
@@ -169,7 +173,7 @@ body.has-fixed-header {
   position: relative;
 }
 
-.header-box2-bg-header-img{
+.header-box2-bg-header-img {
   /* width: 36%;
   height: 149px;
   position: fixed;
@@ -185,7 +189,7 @@ body.has-fixed-header {
   z-index: 0;
 }
 
-.header-box2-liga-maz{
+.header-box2-liga-maz {
   z-index: 1;
   /* position: absolute;
   right: 50px; */
@@ -193,7 +197,7 @@ body.has-fixed-header {
   object-fit: contain;
 }
 
-.header-box2-srebrny-cert-img{
+.header-box2-srebrny-cert-img {
   z-index: 1;
   /* position: absolute;
   right: 230px; */
@@ -202,7 +206,7 @@ body.has-fixed-header {
 }
 
 
-.header-box1-logo{
+.header-box1-logo {
   width: 125px;
   object-fit: contain;
   /* margin-top: 0px;
@@ -235,8 +239,10 @@ body.has-fixed-header {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 600px; /* Задай фіксовану висоту для перевірки */
-  background-color: #1b263b; /* Трохи інший відтінок, щоб бачити межі */
+  height: 600px;
+  /* Задай фіксовану висоту для перевірки */
+  background-color: #1b263b;
+  /* Трохи інший відтінок, щоб бачити межі */
 }
 
 
@@ -278,22 +284,68 @@ body.has-fixed-header {
 
 .main {
   display: flex;
-  flex-direction: column;
   width: 100%;
-  min-height: 800px; /* Використовуйте min-height замість height */
+  min-height: 800px;
+  /* Використовуйте min-height замість height */
   background-color: #161f30;
-  
+
   /* ВАЖЛИВО: Оскільки хедер fixed (149px), додаємо відступ зверху, 
      щоб контент не ховався під меню */
-  margin-top: 149px; 
-  
+  margin-top: 149px;
+
   /* Для тестів додайте колір, щоб переконатися, що блок є */
-  border: 2px solid red; 
+  border: 2px solid red;
 }
 
-.info{
-  background-color: #161f30;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -303,16 +355,16 @@ body.has-fixed-header {
 /* ------------------------------- */
 
 
-.main-kontact-container{
-    height: 1000px;
-    width: 1000px;
+.main-kontact-container {
+  height: 1000px;
+  width: 1000px;
 }
 
 /* ----------new-info--------------- */
 
 
 
-.info{
+.info {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -323,19 +375,21 @@ body.has-fixed-header {
 }
 
 
-.info-section-title-cont{
+.info-section-title-cont {
   display: flex;
+  flex-direction: row;
   margin-top: 50px;
   gap: 40px;
+
 }
 
-.info-section-line{
+.info-section-line {
   width: 300px;
   height: 0px;
   margin-top: 15px;
 }
 
-.info-section-title{
+.info-section-title {
   color: white;
   font-family: Bebas Neue;
   font-size: 40px;
@@ -348,51 +402,52 @@ body.has-fixed-header {
 
 
 
-.footer{
+.footer {
   height: 400px;
   width: 100%;
 
 }
 
-.footer-line{
+.footer-line {
   width: 100%;
   float: inline-start;
 }
 
-.footer-list-link{
-      text-decoration: none;
-    font-family: Bebas Neue;
-    font-size: 24px;
-    color: rgb(192, 192, 192);
-    transition: 0.3s;
-}
-
-.footer-list-title{
+.footer-list-link {
   text-decoration: none;
-    font-family: Bebas Neue;
-    font-size: 24px;
-    color: rgb(192, 192, 192);
-    transition: 0.3s;
+  font-family: Bebas Neue;
+  font-size: 24px;
+  color: rgb(192, 192, 192);
+  transition: 0.3s;
+}
+
+.footer-list-title {
+  text-decoration: none;
+  font-family: Bebas Neue;
+  font-size: 24px;
+  color: rgb(192, 192, 192);
+  transition: 0.3s;
 }
 
 
 
-.footer-container{
+.footer-container {
   width: 100%;
   display: flex;
   gap: 220px;
 }
 
-.footer-list{
+.footer-list {
   margin-left: 50px;
   display: flex;
   flex-direction: column;
-  
+
 }
 
-.first-footer-list{
+.first-footer-list {
   margin-left: 30px;
 }
+
 /* ------------------------------------ */
 
 
@@ -406,71 +461,71 @@ body.has-fixed-header {
 
 @media (max-width: 599px) {
 
-  .header-box2{
-  height: 100%;
-}
+  .header-box2 {
+    height: 100%;
+  }
 
-.header-box2-bg-header-img{
-  height: 100%;
-}
-
-
-.header-list-link{
-  font-size: 35px;
-}
-
-.header-list{
-  gap: 25px;
-  margin-left: 40px;
-  flex-wrap: wrap;
-  width: 450px;
-  
-}
+  .header-box2-bg-header-img {
+    height: 100%;
+  }
 
 
-.video-cont{
-  height: 500px;
-  background-position: center;
-}
+  .header-list-link {
+    font-size: 35px;
+  }
+
+  .header-list {
+    gap: 25px;
+    margin-left: 40px;
+    flex-wrap: wrap;
+    width: 450px;
+
+  }
 
 
+  .video-cont {
+    height: 500px;
+    background-position: center;
+  }
 
 
 
 
-.footer-container{
-  width: 60%;
-  display: flex;
-  gap: 70px;
-  margin-left: 30px;
-  flex-direction: column;
-}
+
+
+  .footer-container {
+    width: 60%;
+    display: flex;
+    gap: 70px;
+    margin-left: 30px;
+    flex-direction: column;
+  }
 
 
 
-hr{
-  width: 300px;
-}
+  hr {
+    width: 300px;
+  }
 
 
 
 
-.header.header-scrolled{
-  height: 95px;
-  opacity: 0.6;
-  position: absolute;
-  /* backdrop-filter: blur(8px); */
+  .header.header-scrolled {
+    height: 95px;
+    opacity: 0.6;
+    position: absolute;
+    /* backdrop-filter: blur(8px); */
 
 
-}
+  }
 
-.footer-list-title-sen{
-  margin-top: 40px;
-}
+  .footer-list-title-sen {
+    margin-top: 40px;
+  }
 
-.footer-list-title-imp{
-  margin-bottom: 40px;
-}
+  .footer-list-title-imp {
+    margin-bottom: 40px;
+  }
 
 }
 
@@ -482,40 +537,40 @@ hr{
 
 
 @media (min-width: 600px) and (max-width: 899px) {
-  .header-box2{
-  height: 100%;
-}
+  .header-box2 {
+    height: 100%;
+  }
 
-.header-box2-bg-header-img{
-  height: 100%;
-}
-
-
-.header-list-link{
-  font-size: 35px;
-}
-
-.header-list{
-  gap: 25px;
-  margin-left: 40px;
-  flex-wrap: wrap;
-  width: 450px;
-  
-}
-
-.footer-container{
-  width: 60%;
-  display: flex;
-  gap: 70px;
-}
+  .header-box2-bg-header-img {
+    height: 100%;
+  }
 
 
-.header.header-scrolled{
-  height: 95px;
-  opacity: 0.6;
-  position: absolute;
-  /* backdrop-filter: blur(8px); */
-}
+  .header-list-link {
+    font-size: 35px;
+  }
+
+  .header-list {
+    gap: 25px;
+    margin-left: 40px;
+    flex-wrap: wrap;
+    width: 450px;
+
+  }
+
+  .footer-container {
+    width: 60%;
+    display: flex;
+    gap: 70px;
+  }
+
+
+  .header.header-scrolled {
+    height: 95px;
+    opacity: 0.6;
+    position: absolute;
+    /* backdrop-filter: blur(8px); */
+  }
 }
 
 
@@ -529,32 +584,32 @@ hr{
 
 
 
-.header-box2{
-  height: 100%;
-}
+  .header-box2 {
+    height: 100%;
+  }
 
-.header-box2-bg-header-img{
-  height: 100%;
-}
+  .header-box2-bg-header-img {
+    height: 100%;
+  }
 
 
-.header-list-link{
-  font-size: 35px;
-}
+  .header-list-link {
+    font-size: 35px;
+  }
 
-.header-list{
-  gap: 25px;
-  margin-left: 40px;
-  flex-wrap: wrap;
-  width: 450px;
-  
-}
+  .header-list {
+    gap: 25px;
+    margin-left: 40px;
+    flex-wrap: wrap;
+    width: 450px;
 
-.footer-container{
-  width: 60%;
-  display: flex;
-  gap: 70px;
-}
+  }
+
+  .footer-container {
+    width: 60%;
+    display: flex;
+    gap: 70px;
+  }
 
 
 
@@ -569,29 +624,29 @@ hr{
 
 
 @media (min-width: 1200px) and (max-width: 1439px) {
-.header-box2{
-  height: 100%;
-}
+  .header-box2 {
+    height: 100%;
+  }
 
-.header-box2-bg-header-img{
-  height: 100%;
-}
+  .header-box2-bg-header-img {
+    height: 100%;
+  }
 
 
-.header-list-link{
-  font-size: 30px;
-}
+  .header-list-link {
+    font-size: 30px;
+  }
 
-.header-list{
-  gap: 35px;
-  margin-right: 60px;
-}
+  .header-list {
+    gap: 35px;
+    margin-right: 60px;
+  }
 
-.footer-container{
-  width: 100%;
-  display: flex;
-  gap: 70px;
-}
+  .footer-container {
+    width: 100%;
+    display: flex;
+    gap: 70px;
+  }
 
 
 }
@@ -603,34 +658,37 @@ hr{
 
 
 .footer-container-sponsor .swiper {
-    /* Высота ровно под один логотип */
-    height: 350px !important; 
-    width: 400px;
-    overflow: hidden;
-    margin-left: auto; /* Прижать вправо */
-    position: relative;
-    right: 0px;
-    top: 0px;
+  /* Высота ровно под один логотип */
+  height: 350px !important;
+  width: 400px;
+  overflow: hidden;
+  margin-left: auto;
+  /* Прижать вправо */
+  position: relative;
+  right: 0px;
+  top: 0px;
 }
 
 .footer-container-sponsor .swiper-wrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-container-sponsor .swiper-slide {
-    height: 350px !important; /* Должна совпадать с высотой swiper */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 350px !important;
+  /* Должна совпадать с высотой swiper */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-container-sponsor .swiper-slide img {
-    max-height: 350px; /* Чтобы логотип не касался границ */
-    width: auto;
-    object-fit: contain;
-    display: block;
-    
+  max-height: 350px;
+  /* Чтобы логотип не касался границ */
+  width: auto;
+  object-fit: contain;
+  display: block;
+
 
 }
 
@@ -650,65 +708,69 @@ hr{
 
 /* Основні стилі списку */
 .header-list {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
 .header-list-item {
-    position: relative;
+  position: relative;
 }
 
 .link-wrapper {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 /* Стиль іконки (стрілочки) */
 .toggle-icon {
-    position: relative;
-    width: 12px;
-    height: 12px;
-    margin-left: 5px;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
 }
 
 .toggle-icon::before,
 .toggle-icon::after {
-    content: "";
-    position: absolute;
-    background-color: #000; /* Колір ліній */
-    transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  background-color: #000;
+  /* Колір ліній */
+  transition: all 0.3s ease;
 }
 
 /* Малюємо стрілочку куточком вниз */
 .toggle-icon::before {
-    width: 2px;
-    height: 8px;
-    left: 3px;
-    transform: rotate(-45deg);
+  width: 2px;
+  height: 8px;
+  left: 3px;
+  transform: rotate(-45deg);
 }
+
 .toggle-icon::after {
-    width: 2px;
-    height: 8px;
-    right: 3px;
-    transform: rotate(45deg);
+  width: 2px;
+  height: 8px;
+  right: 3px;
+  transform: rotate(45deg);
 }
 
 /* Стан Хрестика (активується через клас .active) */
 .has-dropdown.active .toggle-icon::before {
-    transform: rotate(45deg);
-    left: 5px;
+  transform: rotate(45deg);
+  left: 5px;
 }
+
 .has-dropdown.active .toggle-icon::after {
-    transform: rotate(-45deg);
-    right: 5px;
+  transform: rotate(-45deg);
+  right: 5px;
 }
 
 /* Стилі випадаючого блоку */
 .dropdown-menu {
   position: absolute;
-  top: 110%; /* Трішки нижче від пункту */
+  top: 110%;
+  /* Трішки нижче від пункту */
   left: 0;
   background: #161f30;
   padding: 15px;
@@ -728,15 +790,160 @@ hr{
 .has-dropdown.active .dropdown-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0); /* Повертається на місце */
+  transform: translateY(0);
+  /* Повертається на місце */
 }
 
 
 .toggle-icon::before,
 .toggle-icon::after {
-    content: "";
-    position: absolute;
-    /* ЗАМІНІТЬ ЦЕЙ КОЛІР НА ВАШ */
-    background-color: #E0A458; /* Наприклад, помаранчевий */
-    transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  /* ЗАМІНІТЬ ЦЕЙ КОЛІР НА ВАШ */
+  background-color: #E0A458;
+  /* Наприклад, помаранчевий */
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Центрируем все блоки со составами и тренерами */
+#team-content,
+#second-team-content,
+#first-team-staff-content,
+#second-team-staff-content {
+  align-items: center;
+  /* Центрирует элементы по горизонтали */
+  text-align: center;
+  /* Центрирует текст внутри параграфов */
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Убеждаемся, что картинки не прижаты к краю */
+#team-content img,
+#second-team-content img,
+#first-team-staff-content img,
+#second-team-staff-content img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  /* Чтобы на мобилках не вылезало */
+  height: auto;
+  margin-top: 100px;
+}
+
+/* Если хочешь, чтобы заголовки позиций тоже были четко по центру */
+.position-header,
+.second-position-header {
+  width: 100%;
+  display: block;
+}
+
+.centered-content {
+  text-align: center;
+}
+
+.centered-content p {
+  display: flex;
+  justify-content: center;
+}
+
+.second-staff-photo {
+  border-radius: 15%;
+  border: 6px solid #cfa56f;
+}
+
+.staff-photo {
+  border-radius: 15%;
+  border: 6px solid #cfa56f;
+  margin-bottom: 30px;
+}
+
+.second-team-staff-content {
+  display: flex;
+}
+
+.second-staff-info {
+  font-family: Bebas Neue;
+  font-size: 27px;
+  color: #ffffff;
+}
+
+.staff-info {
+  font-family: Bebas Neue;
+  font-size: 27px;
+  color: #ffffff;
+}
+
+.second-team-staff-title {
+  font-family: Bebas Neue;
+  font-size: 35px;
+  color: #eebf81;
+  margin-top: 30px;
+}
+
+.second-staff-title-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.staff-title-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.team-staff-title {
+  font-family: Bebas Neue;
+  font-size: 35px;
+  color: #eebf81;
+  margin-top: 30px;
 }

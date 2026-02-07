@@ -115,6 +115,7 @@ window.addEventListener('load', () => {
 
 
 
+
 async function initVerticalSponsorSlider() {
     const wrapper = document.getElementById('sponsor-list');
     if (!wrapper) return;
@@ -152,6 +153,72 @@ async function initVerticalSponsorSlider() {
         console.error('Błąd ładowania sponsorów:', e); 
     }
 }
+
+window.addEventListener('load', () => {
+    initVerticalSponsorSlider();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function loadSecondTeamSquad() {
+    const container = document.getElementById('second-team-content');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/druga_druzyna/143?v=' + Math.random());
+        const data = await response.json();
+
+        if (data && data.content && data.content.rendered) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = data.content.rendered;
+
+            // Добавляем классы игрокам
+            tempDiv.querySelectorAll('img').forEach(img => img.classList.add('second-team-photo'));
+            tempDiv.querySelectorAll('strong').forEach(strong => strong.parentElement.classList.add('second-position-header'));
+            tempDiv.querySelectorAll('p').forEach(p => {
+                if (!p.querySelector('img') && !p.querySelector('strong')) p.classList.add('second-player-name');
+            });
+
+            container.innerHTML = tempDiv.innerHTML;
+        }
+    } catch (e) { console.error('Błąd (2nd Squad):', e); }
+}
+
+
+window.addEventListener('load', () => {
+    loadSecondTeamSquad();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
