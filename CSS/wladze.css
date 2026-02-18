@@ -102,10 +102,6 @@ body.has-fixed-header {
 
 
 
-
-
-
-
 .Akademia-list{
   display: flex;
   gap: 10px;
@@ -140,10 +136,6 @@ body.has-fixed-header {
 
 
 
-
-
-
-
 .header.header-scrolled{
   height: 95px;
   opacity: 0.6;
@@ -153,6 +145,10 @@ body.has-fixed-header {
 .hero-wrap.hero-wrap-scrolled{
   background-color: brown;
 }
+
+
+
+
 
 .header-list-link{
   text-decoration: none;
@@ -245,6 +241,91 @@ body.has-fixed-header {
 /* ---------------------- */
 
 
+.hero-section {
+  width: 100%;
+  height: 750px;
+  float: right;
+  overflow: hidden;
+  margin-left: 70px;
+}
+
+
+
+
+
+
+.hero-swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px 0 0 4px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 90px;
+}
+
+.hero-swiper::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: 4px 0 0 4px;
+  box-shadow: inset 0 0 150px rgba(0,0,0,0.6);
+  z-index: 10; 
+}
+
+.hero-swiper .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.2); 
+  z-index: 10;
+  pointer-events: none;
+  border-radius: 4px 0 0 4px;
+}
+
+
+
+
+
+
+
+.hero-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+    mix-blend-mode: multiply; /* потемнює зображення */
+}
+
+
+
+.swiper-pagination-bullet {
+  background: white;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 40px;
+  height: 6px;
+  background: rgba(0,0,0,0.5);
+  margin: 0 5px !important;
+  transition: 0.3s;
+}
+
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 40px;
+  height: 6px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 3px;
+  margin: 0 5px !important;
+  transition: 0.3s;
+}
 
 
 
@@ -256,15 +337,223 @@ body.has-fixed-header {
 
 
 
-.info {
+
+.hero-wrap{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 70px;
+}
+
+.hero-aside{
+    display: flex;
+  justify-content: center;
+  float: left;
+  height: 900px;
+  background-color: #161f30;
+
+  align-items: center;
+
+
+
+
+
+  flex-direction: column;
+}
+
+
+
+
+
+.hero-match-wrap-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  
+
+}
+
+
+
+
+
+
+
+.hero-match-container{
+  
+  margin-top: -60px;
+
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+
+  background-color: #202c44;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 600px; /* Задай фіксовану висоту для перевірки */
-  background-color: #1b263b; /* Трохи інший відтінок, щоб бачити межі */
+
 }
+
+.hero-match-inside{
+  
+  
+  border: 0.5px solid #E0A458;
+  width: 380px;
+  height: 440px;
+  background-color: #23324e;
+}
+
+.stadion-svg{
+  width: 100px;
+  fill: white;
+  margin-left: 140px;
+
+}
+
+.ball-svg{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 90px;
+  fill: white;
+  margin-left: 140px;
+}
+
+.next-match-line{
+  border: 0.1px solid #E0A458;
+
+  
+}
+
+
+.next-match-title{
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+.next-match-title-inside{
+    display: flex;
+  justify-content: center;
+  color: #E0A458;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+  text-align: center;
+}
+
+
+
+
+.next-match-paragraph{
+    display: flex;
+  justify-content: center;
+  color: #E0A458;
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+.next-match-paragraph-first{
+      display: flex;
+  justify-content: center;
+  color: #E0A458;
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* next-match-junior */
+
+
+.hero-match-container-jun{
+  margin-top:20px;
+
+  width: 395px;
+  height: 365px;
+  background-color: #202c44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero-match-inside-jun{
+  border: 0.5px solid #E0A458;
+  width: 380px;
+  height: 350px;
+  background-color: #23324e;
+}
+
+
+.next-match-title-jun{
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+.next-match-paragraph-first-jun{
+    display: flex;
+  justify-content: center;
+  color: #E0A458;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+
+
+
+
+.next-match-paragraph-jun{
+    display: flex;
+  justify-content: center;
+  color: #E0A458;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+
+
+.stadion-svg-jun{
+  width: 70px;
+  fill: #E0A458;
+  margin-left: 155px;
+}
+
+.ball-svg-jun{
+    margin-top: 20px;
+  margin-bottom: 10px;
+  width: 60px;
+  fill: #E0A458;
+  margin-left: 160px;
+}
+
+/* ------------slider---------- */
+
+
+
+
+
+
+
+
 
 
 
@@ -303,26 +592,135 @@ body.has-fixed-header {
 
 /* ------------- */
 
-.main {
+.main{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
-  min-height: 800px; /* Використовуйте min-height замість height */
-  background-color: rgba(0,0,0,0.6);
-  
-  /* ВАЖЛИВО: Оскільки хедер fixed (149px), додаємо відступ зверху, 
-     щоб контент не ховався під меню */
-  margin-top: 149px; 
-  
-  /* Для тестів додайте колір, щоб переконатися, що блок є */
-  border: 2px solid red; 
-}
 
-.info{
   background-color: #161f30;
 }
 
+.sul-herb{
+  width: 100px;
+}
 
+.map-sul{
+  float: right;
+  margin-top: 100px;
+  margin-right: 40px;
+  margin-left: 150px;
+  padding: 10px;
+
+}
+
+.main-map-title{
+  font-family: Bebas Neue;
+  margin-top: 100px;
+  font-size: 60px;
+  color: white;
+ 
+}
+
+
+.title-wrap{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-line{
+  width: 1200px;
+  margin-top: 100px;
+}
+
+
+.klub-info{
+    font-family: Bebas Neue;
+  font-size: 30px;
+  color: rgb(192, 192, 192);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.klub-info:hover{
+    font-family: Bebas Neue;
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+    transition: 0.3s;
+}
+
+.google-map{
+  display: flex;
+}
+
+.klub-list{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+
+
+
+}
+
+.klub-title{
+  font-family: Bebas Neue;
+  font-size: 34px;
+  color: white;
+
+  text-decoration: none;
+    transition: 0.3s;
+    margin-bottom: 80px;
+    margin-top: 40px;
+}
+
+.klub-info-container{
+  margin-top: 109px;
+  margin-left: 40px;
+  width: 700px;
+  height: 540px;
+  padding: 30px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+/* ------------video section ----------- */
+
+.video-cont{
+  opacity: 0.5;
+  width: 100%;
+  height: 900px;
+  background-image: url("./team-after-match.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.play-video-button{
+  width: 150px;
+  height: 70px;
+  border: 0px;
+  background-color: black;
+  opacity: 0.78;
+  color: white;
+
+  font-family: Bebas Neue;
+  font-size: 40px;
+  
+  
+}
 
 
 
@@ -330,10 +728,7 @@ body.has-fixed-header {
 /* ------------------------------- */
 
 
-.main-kontact-container{
-    height: 1000px;
-    width: 1000px;
-}
+
 
 /* ----------new-info--------------- */
 
@@ -431,75 +826,283 @@ body.has-fixed-header {
 
 
 
-@media (max-width: 599px) {
+/* ============================= */
+/* 🔥 MOBILE / RESPONSIVE FIX 🔥 */
+/* ============================= */
 
-  .header-box2{
-  height: 100%;
+* {
+  box-sizing: border-box;
 }
 
-.header-box2-bg-header-img{
-  height: 100%;
+/* ---- GOOGLE MAP + INFO ---- */
+
+.google-map {
+  display: flex;
+  gap: 40px;
 }
 
-
-.header-list-link{
-  font-size: 35px;
+/* 📱 мобілки */
+@media (max-width: 768px) {
+  .google-map {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.header-list{
+/* ---- INFO BOX ---- */
+
+.klub-info-container {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* текст */
+.klub-list {
   gap: 25px;
-  margin-left: 40px;
-  flex-wrap: wrap;
-  width: 450px;
+}
+
+.klub-title {
+  margin-bottom: 30px;
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.klub-info {
+  font-size: 22px;
+}
+
+/* ---- MAP ---- */
+
+.map-sul {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  float: none;
+  padding: 0;
+  border-radius: 6px;
+}
+
+/* ---- MAIN LINE ---- */
+.main-line {
+  width: 90%;
+}
+
+/* ---- HERO FIX ---- */
+
+@media (max-width: 768px) {
+  .hero-wrap {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .hero-section {
+    height: 300px;
+    margin-left: 0;
+  }
+
+  .hero-aside {
+    height: auto;
+  }
+
+  .hero-match-container,
+  .hero-match-container-jun {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* ---- VIDEO ---- */
+
+.video-cont {
+  height: 60vh;
+  min-height: 300px;
+  margin-top: 200px;
+  background-position: center;
+}
+
+/* ---- FOOTER ---- */
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+
+
+
+
+}
+
+/* ---- HEADER ---- */
+
+@media (max-width: 768px) {
+
+  .header-list-link{
+    font-size: 20px;
+  }
+
+
   
 }
 
 
-.video-cont{
-  height: 500px;
-  background-position: center;
+
+
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-container ul {
+    align-items: center;
+  }
+
+  .footer-container img {
+    max-width: 120px;
+    height: auto;
+  }
+}
+/* ============================= */
+/* 🔥 MOBILE / RESPONSIVE FIX (MAX-WIDTH: 768PX) 🔥 */
+/* ============================= */
+
+/* ============================= */
+/* 🔥 MOBILE / RESPONSIVE FIX (MAX-WIDTH: 768PX) 🔥 */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    /* --- 1. ХЕДЕР (Знімаємо фіксацію) --- */
+    .header {
+        position: relative !important;
+        height: auto !important;
+        flex-direction: column;
+        padding-bottom: 20px;
+        background-color: #1B263B;
+    }
+
+    .body {
+        padding-top: 0 !important;
+    }
+
+    /* --- 2. ЛОГОТИП КЛУБУ (Центруємо) --- */
+    .header-box1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+    }
+    
+    .header-box1-logo {
+        width: 110px;
+        margin: 0;
+    }
+
+    /* --- 3. МЕНЮ (Flex-wrap для переносу рядків) --- */
+    .header-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px 25px;
+        margin: 0;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .header-list-item {
+        margin-right: 0;
+    }
+
+    .header-list-link {
+        font-size: 24px !important;
+    }
+
+    /* --- 4. DROPDOWN (Відкривається вниз, розсуваючи контент) --- */
+    .dropdown-menu {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        background-color: #151d2e;
+        border-top: 1px solid #E0A458;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        margin-top: 10px;
+        box-shadow: none;
+    }
+
+    .has-dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .Seniorzy-cont, 
+    .Akademia-list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    /* --- 5. ЛОГОТИПИ СПОНСОРІВ (Без білого фону) --- */
+    .header-box2 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 30px;
+        position: static;
+        order: 1; /* Ставимо в самий низ */
+    }
+
+    /* Прибираємо білу пляму */
+    .header-box2-bg-header-img {
+        display: none !important;
+    }
+
+    /* Показуємо логотипи */
+    .header-box2-srebrny-cert-img {
+          display: block !important;
+        position: static;
+        width: 80px;
+        height: auto;
+        object-fit: contain;
+        margin: 0;
+        border-radius: 5px;
+    }
+     .header-box2-liga-maz{
+   display: block !important;
+        position: static;
+        width: 60px;
+        height: auto;
+        object-fit: contain;
+        margin: 0;
+        border-radius: 5px;
+     }
+  
 }
 
 
 
-
-
-
-.footer-container{
-  width: 60%;
-  display: flex;
-  gap: 70px;
-  margin-left: 30px;
-  flex-direction: column;
-}
-
-
-
-hr{
-  width: 300px;
-}
-
-
-
-
-.header.header-scrolled{
-  height: 95px;
-  opacity: 0.6;
-  position: absolute;
-  /* backdrop-filter: blur(8px); */
-
-
-}
-
-.footer-list-title-sen{
-  margin-top: 40px;
-}
-
-.footer-list-title-imp{
-  margin-bottom: 40px;
-}
-
-}
 
 
 
@@ -538,10 +1141,7 @@ hr{
 
 
 .header.header-scrolled{
-  height: 95px;
-  opacity: 0.6;
-  position: absolute;
-  /* backdrop-filter: blur(8px); */
+
 }
 }
 
@@ -767,6 +1367,100 @@ hr{
     background-color: #E0A458; /* Наприклад, помаранчевий */
     transition: all 0.3s ease;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-management {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+.management-card {
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.management-title {
+    color: #0056b3;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+}
+
+/* Стилізація списків та тексту всередині */
+.management-details {
+    line-height: 1.8;
+    color: #333;
+    font-size: 16px;
+}
+
+.management-details strong {
+    color: #000;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.management-details p {
+    margin-bottom: 15px;
+}
+
+/* Якщо дані виведені списком (ul/li) */
+.management-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.management-details li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+
+
+
+
 
 
 

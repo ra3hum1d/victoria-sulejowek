@@ -155,118 +155,35 @@ filter.addEventListener('click', () => {
 
 
 
-async function loadTeamResults() {
-    const container = document.getElementById('team-results-content');
+
+async function loadRegulaminy() {
+    const container = document.getElementById('regulaminy-content');
     if (!container) return;
 
     try {
-        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/pierwsza_druzyna/112?v=' + Math.random());
+        // Отримуємо дані для запису ID 154
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/klub/154?v=' + Math.random());
         const data = await response.json();
 
-        if (data && data.content && data.content.rendered) {
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = data.content.rendered;
+        if (data && data.content) {
+            // Очищуємо від стилів Georgia, щоб текст підлаштувався під ваш сайт
+            const cleanContent = data.content.rendered.replace(/style="[^"]*"/g, "");
 
-            // Очищуємо вбудовані стилі та додаємо класи
-            tempDiv.querySelectorAll('p').forEach(p => {
-                p.removeAttribute('style'); 
-                p.classList.add('results-text');
-                
-                // Якщо це заголовок туру (наприклад, 1 KOLEJKA)
-                if (p.querySelector('strong')) {
-                    p.classList.add('round-header');
-                }
-            });
-
-            container.innerHTML = tempDiv.innerHTML;
+            container.innerHTML = `
+                <div class="regulaminy-card">
+                    <h2 class="regulaminy-title">${data.title.rendered}</h2>
+                    <div class="regulaminy-body">
+                        ${cleanContent || '<p>Przepraszamy, strona w trakcie budowy.</p>'}
+                    </div>
+                </div>
+            `;
         }
     } catch (e) {
-        console.error('Błąd ładowania wyników:', e);
+        console.error('Błąd ładowania regulaminów:', e);
     }
 }
 
 
 window.addEventListener('load', () => {
-    loadTeamResults();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-async function loadSecondTeamResults() {
-    const container = document.getElementById('second-team-results-content');
-    if (!container) return;
-
-    try {
-        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/druga_druzyna/145?v=' + Math.random());
-        const data = await response.json();
-
-        if (data && data.content && data.content.rendered) {
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = data.content.rendered;
-
-            // Видаляємо фіксовану ширину та стилі у таблиць і осередків
-            tempDiv.querySelectorAll('table, tr, td, p').forEach(el => {
-                el.removeAttribute('style');
-                el.removeAttribute('width');
-                el.removeAttribute('height');
-            });
-
-            // Додаємо клас для таблиці для стилізації через CSS
-            tempDiv.querySelectorAll('table').forEach(table => {
-                table.classList.add('results-table');
-            });
-
-            container.innerHTML = tempDiv.innerHTML;
-        }
-    } catch (e) {
-        console.error('Błąd ładowania wyników (ID 145):', e);
-    }
-}
-
-window.addEventListener('load', () => {
-    loadSecondTeamResults();
-});
+    loadRegulaminy();
+}); 

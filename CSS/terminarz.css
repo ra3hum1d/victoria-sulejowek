@@ -111,7 +111,6 @@ body.has-fixed-header {
 
 
 
-
 .Akademia-list{
   display: flex;
   gap: 10px;
@@ -128,10 +127,6 @@ body.has-fixed-header {
 .Seniorzy-list-main{
   margin-top: 20px;
 }
-
-
-
-
 
 
 
@@ -885,155 +880,59 @@ body.has-fixed-header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Контейнер секції */
-#second-team-results-container {
-    max-width: 1000px;
-    margin: 40px auto;
-    text-align: center;
-    font-family: 'Georgia', serif; /* Як на скріншоті */
-}
-
-/* Заголовок */
-.section-title {
-    text-transform: uppercase;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Таблиця результатів */
-.results-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    background: #fff;
-}
-
-.results-table td {
-    padding: 12px 8px;
-    border: 1px solid #ddd;
-    text-align: center; /* Центруємо текст у осередках */
-    vertical-align: middle;
-    font-size: 16px;
-}
-
-/* Робимо жирним рахунок (друга колонка) */
-.results-table td:nth-child(2) {
-    font-weight: bold;
-    background-color: #f9f9f9;
-}
-
-/* Адаптивність для мобільних */
-@media (max-width: 600px) {
-    .results-table td {
-        font-size: 14px;
-        padding: 8px 4px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.section-title{
-      text-decoration: none;
-  color: #ffffff;
-  font-family: Bebas Neue;
-  font-size: 32px;
-}
-
- 
-
-
 .main-content {
     display: flex;
     justify-content: center;
-    height: 1400px;
-    margin-top: 300px;
 
 }
 
-.second-team-results-content,p{
-          text-decoration: none;
-  color: #ffffff;
-  font-family: Bebas Neue;
-  font-size: 32px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+#next-match-section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    border-left: 6px solid #0056b3;
+    text-align: center;
 }
 
-tr{
-    background-color: #3e6792;
-    
-    
+.match-teams {
+    font-size: 44px;
+    color: #398ae0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+      font-family: Bebas Neue;
 }
 
-.results-table td{
-border: 3px solid  #977c58 ;
+.match-details {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+
+.match-details p {
+    margin: 0;
+    text-align: center !important;
+        font-size: 34px;
+    color: #000000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+      font-family: Bebas Neue;
 }
 
 
@@ -1069,7 +968,30 @@ border: 3px solid  #977c58 ;
 
 
 
+#second-team-terminarz-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
 
+.in-construction-text {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+    list-style: none; /* Прибираємо крапку списку */
+    display: inline-block;
+}
+
+/* Примусове центрування для ul */
+#second-team-terminarz-content ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 
 
 

@@ -1,0 +1,300 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('.header');
+  const THRESHOLD = 0; 
+
+  function onScroll() {
+    if (window.scrollY > THRESHOLD) {
+      header.classList.add('header-scrolled');
+      // document.body.classList.add('has-fixed-header');
+    } else {
+      header.classList.remove('header-scrolled');
+      // document.body.classList.remove('has-fixed-header');
+    }
+  }
+
+  onScroll();
+  window.addEventListener('scroll', onScroll);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function loadTeamSquad() {
+    const container = document.getElementById('team-content');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/pierwsza_druzyna/54?v=' + Math.random());
+        const data = await response.json();
+
+        if (data && data.content && data.content.rendered) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = data.content.rendered;
+
+            tempDiv.querySelectorAll('img').forEach(img => {
+                img.classList.add('team-photo');
+            });
+
+            tempDiv.querySelectorAll('strong').forEach(strong => {
+                strong.parentElement.classList.add('position-header');
+            });
+
+            tempDiv.querySelectorAll('p').forEach(p => {
+                if (!p.querySelector('img') && !p.querySelector('strong')) {
+                    p.classList.add('player-name');
+                }
+            });
+
+            container.innerHTML = tempDiv.innerHTML;
+            container.classList.add('squad-loaded');
+        }
+    } catch (e) {
+        console.error('Błąd:', e);
+    }
+}
+
+
+window.addEventListener('load', () => {
+    loadTeamSquad();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function initVerticalSponsorSlider() {
+    const wrapper = document.getElementById('sponsor-list');
+    if (!wrapper) return;
+    
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/sponsorzy?_embed');
+        if (!response.ok) return;
+
+        const sponsors = await response.json();
+        wrapper.innerHTML = ''; 
+
+        sponsors.forEach(sponsor => {
+            let imgUrl = '';
+            if (sponsor._embedded && sponsor._embedded['wp:featuredmedia']) {
+                imgUrl = sponsor._embedded['wp:featuredmedia'][0].source_url;
+            }
+            if (imgUrl) {
+                wrapper.innerHTML += `
+                    <div class="swiper-slide">
+                        <img src="${imgUrl}" alt="${sponsor.title.rendered}">
+                    </div>`;
+            }
+        });
+
+        new Swiper('.mySponsorSwiper', {
+            direction: 'vertical',
+            loop: true,
+            speed: 1000,
+            autoplay: { delay: 2000, disableOnInteraction: false },
+            slidesPerView: 1,
+            spaceBetween: 0,
+            allowTouchMove: false
+        });
+    } catch (e) { 
+        console.error('Błąd ładowania sponsorów:', e); 
+    }
+}
+
+window.addEventListener('load', () => {
+    initVerticalSponsorSlider();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function loadSecondTeamSquad() {
+    const container = document.getElementById('second-team-content');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/druga_druzyna/143?v=' + Math.random());
+        const data = await response.json();
+
+        if (data && data.content && data.content.rendered) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = data.content.rendered;
+
+            // Добавляем классы игрокам
+            tempDiv.querySelectorAll('img').forEach(img => img.classList.add('second-team-photo'));
+            tempDiv.querySelectorAll('strong').forEach(strong => strong.parentElement.classList.add('second-position-header'));
+            tempDiv.querySelectorAll('p').forEach(p => {
+                if (!p.querySelector('img') && !p.querySelector('strong')) p.classList.add('second-player-name');
+            });
+
+            container.innerHTML = tempDiv.innerHTML;
+        }
+    } catch (e) { console.error('Błąd (2nd Squad):', e); }
+}
+
+
+window.addEventListener('load', () => {
+    loadSecondTeamSquad();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Знаходимо сам фільтр (додаємо крапку!)
+const filter = document.querySelector('.blur-filter');
+// Знаходимо всі кнопки меню
+const menuToggles = document.querySelectorAll('.has-dropdown .link-wrapper');
+
+menuToggles.forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = item.parentElement;
+        
+        // Перемикаємо стан активності для пункту меню (стрілочка/хрестик)
+        parent.classList.toggle('active');
+
+        // Логіка для фільтра: 
+        // Перевіряємо, чи є хоча б одне відкрите меню
+        const anyActive = document.querySelector('.has-dropdown.active');
+        
+        if (anyActive) {
+            filter.classList.add('show'); // Показуємо чорний фон
+        } else {
+            filter.classList.remove('show'); // Ховаємо, якщо все закрито
+        }
+    });
+});
+
+// Додатково: закривати меню при кліку на сам фільтр
+filter.addEventListener('click', () => {
+    document.querySelectorAll('.has-dropdown').forEach(el => el.classList.remove('active'));
+    filter.classList.remove('show');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function loadClubHistory() {
+    const container = document.getElementById('club-history-content');
+    if (!container) return;
+
+    try {
+        // Завантажуємо весь список записів типу 'klub'
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/klub?v=' + Math.random());
+        const data = await response.json();
+
+        // Шукаємо запис з ID 1508 або той, що має slug 'historia'
+        const historyPost = data.find(post => post.id === 1508 || post.slug === 'historia');
+
+        if (historyPost && historyPost.content) {
+            container.innerHTML = historyPost.content.rendered;
+            
+            // Очищуємо стилі, щоб текст вписався в твій новий дизайн
+            container.querySelectorAll('*').forEach(el => el.removeAttribute('style'));
+        } else {
+            container.innerHTML = "<p>Nie знайдено запису історії.</p>";
+        }
+    } catch (e) {
+        console.error('Błąd ładowania:', e);
+    }
+}
+
+
+window.addEventListener('load', () => {
+    loadClubHistory();
+}); 

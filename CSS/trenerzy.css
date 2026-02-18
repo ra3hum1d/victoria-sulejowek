@@ -110,6 +110,32 @@ body.has-fixed-header {
 
 
 
+.Akademia-list{
+  display: flex;
+  gap: 10px;
+}
+
+.Akademia-list-unfo{
+  flex-direction: column;
+}
+
+.Akademia-list-menu{
+  width: 400px;
+}
+
+.Seniorzy-list-main{
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -946,4 +972,447 @@ body.has-fixed-header {
   font-size: 35px;
   color: #eebf81;
   margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* ---- GOOGLE MAP + INFO ---- */
+
+.google-map {
+  display: flex;
+  gap: 40px;
+}
+
+/* 📱 мобілки */
+@media (max-width: 768px) {
+  .google-map {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .klub-info-container {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* текст */
+.klub-list {
+  gap: 25px;
+}
+
+.klub-title {
+  margin-bottom: 30px;
+  margin-top: 0;
+  font-size: 38px;
+}
+
+.klub-info {
+  font-size: 29px;
+}
+
+/* ---- MAP ---- */
+
+.map-sul {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  float: none;
+  padding: 0;
+  border-radius: 6px;
+}
+
+/* ---- MAIN LINE ---- */
+.main-line {
+  width: 90%;
+}
+}
+
+/* ---- INFO BOX ---- */
+
+
+
+/* ---- HERO FIX ---- */
+
+@media (max-width: 768px) {
+  .hero-wrap {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .hero-section {
+    height: 300px;
+    margin-left: 0;
+  }
+
+  .hero-aside {
+    height: auto;
+  }
+
+  .hero-match-container,
+  .hero-match-container-jun {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* ---- VIDEO ---- */
+
+
+
+/* ---- FOOTER ---- */
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+
+  height: 60vh;
+  min-height: 300px;
+  margin-top: 200px;
+  background-position: center;
+}
+  }
+
+
+
+
+
+
+
+/* ---- HEADER ---- */
+
+@media (max-width: 768px) {
+
+  .header-list-link{
+    font-size: 20px;
+  }
+
+
+  
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-container ul {
+    align-items: center;
+  }
+
+  .footer-container img {
+    max-width: 120px;
+    height: auto;
+  }
+}
+/* ============================= */
+/* 🔥 MOBILE / RESPONSIVE FIX (MAX-WIDTH: 768PX) 🔥 */
+/* ============================= */
+
+/* ============================= */
+/* 🔥 MOBILE / RESPONSIVE FIX (MAX-WIDTH: 768PX) 🔥 */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    /* --- 1. ХЕДЕР (Знімаємо фіксацію) --- */
+    .header {
+        position: relative !important;
+        height: auto !important;
+        flex-direction: column;
+        padding-bottom: 20px;
+        background-color: #1B263B;
+    }
+
+    .body {
+        padding-top: 0 !important;
+    }
+
+    /* --- 2. ЛОГОТИП КЛУБУ (Центруємо) --- */
+    .header-box1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+    }
+    
+    .header-box1-logo {
+        width: 110px;
+        margin: 0;
+    }
+
+    /* --- 3. МЕНЮ (Flex-wrap для переносу рядків) --- */
+    .header-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px 25px;
+        margin: 0;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .header-list-item {
+        margin-right: 0;
+    }
+
+    .header-list-link {
+        font-size: 24px !important;
+    }
+
+    /* --- 4. DROPDOWN (Відкривається вниз, розсуваючи контент) --- */
+    .dropdown-menu {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        background-color: #151d2e;
+        border-top: 1px solid #E0A458;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        margin-top: 10px;
+        box-shadow: none;
+    }
+
+    .has-dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .Seniorzy-cont, 
+    .Akademia-list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    /* --- 5. ЛОГОТИПИ СПОНСОРІВ (Без білого фону) --- */
+    .header-box2 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 30px;
+        position: static;
+        order: 1; /* Ставимо в самий низ */
+    }
+
+    /* Прибираємо білу пляму */
+    .header-box2-bg-header-img {
+        display: none !important;
+    }
+
+    /* Показуємо логотипи */
+    .header-box2-srebrny-cert-img {
+          display: block !important;
+        position: static;
+        width: 80px;
+        height: auto;
+        object-fit: contain;
+        margin: 0;
+        border-radius: 5px;
+    }
+     .header-box2-liga-maz{
+   display: block !important;
+        position: static;
+        width: 60px;
+        height: auto;
+        object-fit: contain;
+        margin: 0;
+        border-radius: 5px;
+     }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .header-box2{
+  height: 100%;
+}
+
+.header-box2-bg-header-img{
+  height: 100%;
+}
+
+
+.header-list-link{
+  font-size: 35px;
+}
+
+.header-list{
+  gap: 25px;
+  margin-left: 40px;
+  flex-wrap: wrap;
+  width: 450px;
+  
+}
+
+.footer-container{
+  width: 60%;
+  display: flex;
+  gap: 70px;
+}
+
+
+.header.header-scrolled{
+
+}
+}
+
+
+
+
+
+
+
+
+@media (min-width: 900px) and (max-width: 1199px) {
+
+
+
+.header-box2{
+  height: 100%;
+}
+
+.header-box2-bg-header-img{
+  height: 100%;
+}
+
+
+.header-list-link{
+  font-size: 35px;
+}
+
+.header-list{
+  gap: 25px;
+  margin-left: 40px;
+  flex-wrap: wrap;
+  width: 450px;
+  
+}
+
+.footer-container{
+  width: 60%;
+  display: flex;
+  gap: 70px;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+.header-box2{
+  height: 100%;
+}
+
+.header-box2-bg-header-img{
+  height: 100%;
+}
+
+
+.header-list-link{
+  font-size: 30px;
+}
+
+.header-list{
+  gap: 35px;
+  margin-right: 60px;
+}
+
+.footer-container{
+  width: 100%;
+  display: flex;
+  gap: 70px;
+}
+
+
 }

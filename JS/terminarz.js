@@ -123,72 +123,43 @@ filter.addEventListener('click', () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-async function loadTeamResults() {
-    const container = document.getElementById('team-results-content');
+async function loadUpcomingMatch() {
+    const container = document.getElementById('upcoming-match-content');
     if (!container) return;
 
     try {
-        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/pierwsza_druzyna/112?v=' + Math.random());
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/terminarz/15927?v=' + Math.random());
         const data = await response.json();
 
-        if (data && data.content && data.content.rendered) {
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = data.content.rendered;
+        if (data) {
+            let htmlContent = '';
 
-            // Очищуємо вбудовані стилі та додаємо класи
-            tempDiv.querySelectorAll('p').forEach(p => {
-                p.removeAttribute('style'); 
-                p.classList.add('results-text');
+            // Виводимо заголовок (Назви команд)
+            if (data.title && data.title.rendered) {
+                htmlContent += `<h3 class="match-teams">${data.title.rendered}</h3>`;
+            }
+
+            // Виводимо контент (Дата та час)
+            if (data.content && data.content.rendered) {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = data.content.rendered;
                 
-                // Якщо це заголовок туру (наприклад, 1 KOLEJKA)
-                if (p.querySelector('strong')) {
-                    p.classList.add('round-header');
-                }
-            });
+                // Очищаємо стилі дати
+                tempDiv.querySelectorAll('p').forEach(p => p.removeAttribute('style'));
+                htmlContent += `<div class="match-details">${tempDiv.innerHTML}</div>`;
+            }
 
-            container.innerHTML = tempDiv.innerHTML;
+            container.innerHTML = htmlContent;
         }
     } catch (e) {
-        console.error('Błąd ładowania wyników:', e);
+        console.error('Błąd ładowania meczu:', e);
     }
 }
 
 
 window.addEventListener('load', () => {
-    loadTeamResults();
-});
+    loadUpcomingMatch();
+}); 
 
 
 
@@ -236,37 +207,48 @@ window.addEventListener('load', () => {
 
 
 
-async function loadSecondTeamResults() {
-    const container = document.getElementById('second-team-results-content');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function loadSecondTeamTerminarz() {
+    const container = document.getElementById('second-team-terminarz-content');
     if (!container) return;
 
     try {
-        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/druga_druzyna/145?v=' + Math.random());
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/druga_druzyna/146?v=' + Math.random());
         const data = await response.json();
 
         if (data && data.content && data.content.rendered) {
             const tempDiv = document.createElement('div');
             tempDiv.innerHTML = data.content.rendered;
 
-            // Видаляємо фіксовану ширину та стилі у таблиць і осередків
-            tempDiv.querySelectorAll('table, tr, td, p').forEach(el => {
+            // Очищуємо стилі для списків та тексту
+            tempDiv.querySelectorAll('li, p, ul').forEach(el => {
                 el.removeAttribute('style');
-                el.removeAttribute('width');
-                el.removeAttribute('height');
-            });
-
-            // Додаємо клас для таблиці для стилізації через CSS
-            tempDiv.querySelectorAll('table').forEach(table => {
-                table.classList.add('results-table');
+                el.classList.add('in-construction-text');
             });
 
             container.innerHTML = tempDiv.innerHTML;
         }
     } catch (e) {
-        console.error('Błąd ładowania wyników (ID 145):', e);
+        console.error('Błąd ładowania terminarza 146:', e);
     }
 }
 
+
 window.addEventListener('load', () => {
-    loadSecondTeamResults();
-});
+    loadSecondTeamTerminarz();
+}); 

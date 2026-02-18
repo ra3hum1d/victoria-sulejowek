@@ -803,6 +803,132 @@ hr{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#akademia-section {
+    padding: 50px 0;
+    background-color: #161f30;;
+}
+
+.akademia-card {
+    background: #161f30;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.akademia-header {
+        text-decoration: none;
+    font-family: Bebas Neue;
+    color: white;
+    font-size: 38px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    
+}
+
+.akademia-body {
+    line-height: 1.8;
+    color: #444;
+    font-size: 18px;
+    text-align: justify;
+    padding: 20px 0;
+}
+
+.akademia-body p {
+    margin-bottom: 20px;
+}
+
+.akademia-body {
+    padding: 20px 0;
+}
+
+.akademia-text {
+    margin-bottom: 15px;
+    line-height: 1.7;
+        text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 26px;
+    color: #ffffff;
+}
+
+.akademia-list {
+    margin: 20px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.akademia-list-item {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.akademia-subtitle {
+    color: #0056b3;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * {
   box-sizing: border-box;
 }

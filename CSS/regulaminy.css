@@ -803,6 +803,125 @@ hr{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#regulaminy-section {
+    padding: 40px 0;
+}
+
+.regulaminy-card {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.regulaminy-title {
+    color: #0056b3;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+.regulaminy-body {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Стиль для посилань на PDF або файли, які будуть у тексті */
+.regulaminy-body a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.regulaminy-body a:hover {
+    border-bottom: 1px solid #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * {
   box-sizing: border-box;
 }
