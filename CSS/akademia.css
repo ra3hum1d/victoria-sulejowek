@@ -232,6 +232,7 @@ body.has-fixed-header {
 
 .header-box1-logo {
     width: 125px;
+      margin-left: 60px;
     object-fit: contain;
     /* margin-top: 0px;
   margin-left: 20px; */
@@ -916,32 +917,35 @@ body.has-fixed-header {
 }
 
 .u7-card {
-    background: #ffffff;
-    border-left: 5px solid #0056b3;
+    background-color: #161f30;
     padding: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-radius: 4px;
+
 }
 
 .u7-main-title {
-    color: #0056b3;
-    font-size: 28px;
-    text-transform: uppercase;
+        text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 37px;
+    color: #4e6cf5;
     margin-bottom: 20px;
-    font-weight: 800;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
 }
 
 .u7-paragraph {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 15px;
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
 }
 
 .u7-loader {
-    text-align: center;
-    font-style: italic;
-    color: #666;
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
 }
 
 
@@ -956,33 +960,32 @@ body.has-fixed-header {
 
 
 .academy-group-section {
-    padding: 50px 0;
-    background-color: #f4f7f9;
+
 }
 
 .academy-card {
-    background: #fff;
+    background-color: #161f30;
     max-width: 900px;
     margin: 0 auto;
     padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .academy-card-title {
-    color: #0056b3;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
-    font-weight: 900;
+        text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 37px;
+    color: #4e6cf5;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
 }
 
 .academy-text {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 20px;
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
 }
 
 /* Стиль для фото команди з вашого скріншоту */
@@ -1003,29 +1006,28 @@ body.has-fixed-header {
 
 
 .academy-u9-card {
-    background: #fff;
-    border-radius: 10px;
+    background-color: #161f30;
     padding: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border-top: 5px solid #0056b3; /* Синій колір клубу */
     max-width: 800px;
     margin: 20px auto;
 }
 
 .academy-u9-title {
-    color: #0056b3;
-    font-size: 26px;
-    font-weight: 800;
-    text-transform: uppercase;
+        text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 37px;
+    color: #4e6cf5;
     margin-bottom: 20px;
-    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
 }
 
 .u9-text {
-    font-size: 17px;
-    line-height: 1.7;
-    color: #333;
-    margin-bottom: 15px;
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
 }
 
 .u9-img {
@@ -1052,27 +1054,27 @@ body.has-fixed-header {
 }
 
 .u10-card {
-    background: #fff;
-    border-radius: 12px;
+    background-color: #161f30;
     padding: 35px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    border-top: 6px solid #0056b3;
+
 }
 
 .u10-title {
-    color: #0056b3;
-    font-size: 30px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 25px;
-    font-weight: 900;
+        text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 37px;
+    color: #4e6cf5;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
 }
 
 .u10-text {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 15px;
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
 }
 
 .u10-photo {
@@ -1120,8 +1122,11 @@ body.has-fixed-header {
 }
 
 .u10-bold {
-    color: #0056b3;
-    font-weight: 700;
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
 }
 
 
@@ -1137,27 +1142,26 @@ body.has-fixed-header {
 }
 
 .academy-u11-card {
-    background: #fff;
-    border-radius: 10px;
+    background-color: #161f30;
     padding: 30px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    border-top: 5px solid #0056b3;
 }
 
 .academy-u11-title {
-    color: #0056b3;
-    font-size: 28px;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 25px;
+        text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 37px;
+    color: #4e6cf5;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
 }
 
 .u11-description {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 15px;
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
 }
 
 .u11-team-img {
@@ -1180,31 +1184,46 @@ body.has-fixed-header {
 
 /* -----------u-12---------- */
 
+
+.u12-content-body{
+        max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 .u12-card {
-    background: #fff;
-    border-radius: 12px;
+    background-color: #161f30;
     padding: 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    border-left: 6px solid #0056b3;
+    
+
 }
 
 .u12-title {
-    color: #0056b3;
-    font-size: 28px;
-    font-weight: 900;
+        text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 37px;
+    color: #4e6cf5;
     margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
 }
 
 .u12-text-p {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #444;
-    margin-bottom: 12px;
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
 }
 
 .u12-accent {
-    color: #0056b3;
-    font-weight: 700;
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
 }
 
 .u12-photo-full {
@@ -1215,12 +1234,240 @@ body.has-fixed-header {
     display: block;
     /* Усунення розмитості при масштабуванні */
     image-rendering: -webkit-optimize-contrast;
+    
 }
 
 .u12-list-group {
     padding-left: 20px;
     margin-bottom: 20px;
 }
+
+
+
+
+/* ---------u-13----------- */
+
+
+/* Контейнер всей секции */
+#u13-group-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Карточка группы */
+.academy-u13-card {
+    background-color: #161f30;
+
+}
+
+/* Заголовок (U-13) */
+.academy-u13-title {
+        text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 37px;
+    color: #4e6cf5;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* Основной контент */
+.academy-u13-body {
+    padding: 20px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Стили для изображений (самое важное) */
+.u13-team-img {
+    display: block;
+    max-width: 100%;    /* Изображение не выйдет за пределы контейнера */
+    height: auto;       /* Сохранение пропорций */
+    margin: 20px auto;  /* Центрирование */
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Стили для текста (параграфов) */
+.u13-description {
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
+}
+
+/* Если в контенте есть галереи WordPress */
+.academy-u13-body figure {
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+
+
+
+
+
+/* ---------u-14--------- */
+
+.academy-u14-main-wrapper {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.u14-status {
+    text-align: center;
+    color: #777;
+    font-size: 1.1rem;
+}
+
+.academy-u14-card {
+    background-color: #161f30;
+    overflow: hidden;
+}
+
+.academy-u14-title {
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 37px;
+    color: #4e6cf5;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* Стили для командного фото */
+.u14-team-img {
+    display: block;
+    max-width: 100%; /* Фото не будет шире контейнера */
+    height: auto;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.u14-description {
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+/* -----------------u-15--------------- */
+
+
+
+.academy-u15-card{
+        background-color: #161f30;
+    overflow: hidden;
+}
+
+.academy-u15-main-wrapper {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.u15-status {
+    text-align: center;
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.academy-u15-title {
+        text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 37px;
+    color: #4e6cf5;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* Настройка изображения команды */
+.u15-team-img {
+    display: block;
+    max-width: 100%; /* Фото не будет шире экрана */
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.u15-description {
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
+}
+
+
+
+/* -----------u-17---------- */
+
+.academy-u17-card{
+    background-color: #161f30;
+
+    overflow: hidden;
+}
+
+.academy-u17-main-wrapper {
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.u17-status {
+    text-align: center;
+    color: #999;
+}
+
+.academy-u17-title {
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 37px;
+    color: #0056b3;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* Стили для фото команды U-17 */
+.u17-team-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 25px 0;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.u17-description {
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #c6ca85;
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+
 
 
 

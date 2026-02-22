@@ -105,3 +105,72 @@ filter.addEventListener('click', () => {
     document.querySelectorAll('.has-dropdown').forEach(el => el.classList.remove('active'));
     filter.classList.remove('show');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function loadContactData() {
+    const container = document.getElementById('contact-info-container');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/klub/155');
+        
+        if (!response.ok) throw new Error('Błąd API');
+        
+        const data = await response.json();
+
+        if (data && data.content) {
+            let htmlContent = data.content.rendered.replace(/style="[^"]*"/g, "");
+
+            container.innerHTML = `
+                <div class="contact-card">
+                    <h2 class="contact-title">${data.title.rendered}</h2>
+                    <div class="contact-body">
+                        ${htmlContent}
+                    </div>
+                </div>
+            `;
+
+            const body = container.querySelector('.contact-body');
+            body.querySelectorAll('p').forEach(p => p.classList.add('contact-line'));
+        }
+    } catch (error) {
+        console.error('Błąd:', error);
+        container.innerHTML = '<p class="contact-status">Nie udało się załadować danych kontaktowych.</p>';
+    }
+}
+
+
+window.addEventListener('load', () => {
+    loadContactData();
+}); 

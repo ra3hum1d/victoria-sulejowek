@@ -490,3 +490,252 @@ async function loadHighQualityU12() {
 window.addEventListener('load', () => {
     loadHighQualityU12()
 }); 
+
+
+
+
+
+
+
+
+
+
+
+// --------------u-13---------- //
+
+async function loadU13GroupData() {
+    const container = document.getElementById('u13-group-container');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/akademia_u19_u13/161');
+        
+        if (!response.ok) throw new Error('Błąd pobierania danych');
+        
+        const data = await response.json();
+
+        if (data && data.content) {
+            let htmlContent = data.content.rendered.replace(/style="[^"]*"/g, "");
+            htmlContent = htmlContent.replace(/-(\d+)x(\d+)\.(jpg|jpeg|png|webp)/g, '.$3');
+
+            container.innerHTML = `
+                <div class="academy-u13-card">
+                    <h2 class="academy-u13-title">${data.title.rendered}</h2>
+                    <div class="academy-u13-body">
+                        ${htmlContent}
+                    </div>
+                </div>
+            `;
+
+            const body = container.querySelector('.academy-u13-body');
+
+            body.querySelectorAll('img').forEach(img => {
+                img.removeAttribute('srcset');
+                img.removeAttribute('sizes');
+                img.removeAttribute('width');
+                img.removeAttribute('height');
+
+                let currentSrc = img.getAttribute('src');
+                if (currentSrc) {
+                    img.setAttribute('src', currentSrc.replace(/-(\d+)x(\d+)\.(jpg|jpeg|png|webp)/g, '.$3'));
+                }
+                img.classList.add('u13-team-img');
+            });
+
+            body.querySelectorAll('p').forEach(p => p.classList.add('u13-description'));
+        }
+    } catch (error) {
+        console.error('Błąd:', error);
+        container.innerHTML = '<p>Błąd ładowania danych grupy U-13.</p>';
+    }
+}
+
+
+window.addEventListener('load', () => {
+    loadU13GroupData();
+}); 
+
+
+
+
+
+
+
+
+// -------------u-14--------- //
+
+
+
+
+async function loadU14GroupData() {
+    const container = document.getElementById('u14-group-container');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/akademia_u19_u13/16725');
+        
+        if (!response.ok) throw new Error('Błąd pobierania danych');
+        
+        const data = await response.json();
+
+        if (data && data.content) {
+            let htmlContent = data.content.rendered
+                .replace(/style="[^"]*"/g, "")
+                .replace(/-(\d+)x(\d+)\.(jpg|jpeg|png|webp)/g, '.$3');
+
+            container.innerHTML = `
+                <div class="academy-u14-card">
+                    <h2 class="academy-u14-title">${data.title.rendered}</h2>
+                    <div class="academy-u14-body">
+                        ${htmlContent}
+                    </div>
+                </div>
+            `;
+
+            const body = container.querySelector('.academy-u14-body');
+
+            body.querySelectorAll('img').forEach(img => {
+                img.removeAttribute('srcset');
+                img.removeAttribute('sizes');
+                img.removeAttribute('width');
+                img.removeAttribute('height');
+                img.classList.add('u14-team-img');
+
+                let src = img.getAttribute('src');
+                if (src) {
+                    img.setAttribute('src', src.replace(/-(\d+)x(\d+)\.(jpg|jpeg|png|webp)/g, '.$3'));
+                }
+            });
+
+            body.querySelectorAll('p').forEach(p => p.classList.add('u14-description'));
+        }
+    } catch (error) {
+        console.error('Błąd:', error);
+        container.innerHTML = '<p class="u14-status">Błąd ładowania данных группы U-14.</p>';
+    }
+}
+
+
+window.addEventListener('load', () => {
+    loadU14GroupData();
+}); 
+
+
+
+
+
+
+
+
+
+
+// -------------------u-15---------------- //
+
+async function loadU15GroupData() {
+    const container = document.getElementById('u15-group-container');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/akademia_u19_u13/13201');
+        
+        if (!response.ok) throw new Error('Błąd pobierania danych');
+        
+        const data = await response.json();
+
+        if (data && data.content) {
+            let htmlContent = data.content.rendered
+                .replace(/style="[^"]*"/g, "")
+                .replace(/-(\d+)x(\d+)\.(jpg|jpeg|png|webp)/g, '.$3');
+
+            container.innerHTML = `
+                <div class="academy-u15-card">
+                    <h2 class="academy-u15-title">${data.title.rendered}</h2>
+                    <div class="academy-u15-body">
+                        ${htmlContent}
+                    </div>
+                </div>
+            `;
+
+            const body = container.querySelector('.academy-u15-body');
+
+            body.querySelectorAll('img').forEach(img => {
+                img.removeAttribute('srcset');
+                img.removeAttribute('sizes');
+                img.removeAttribute('width');
+                img.removeAttribute('height');
+                img.classList.add('u15-team-img');
+
+                let src = img.getAttribute('src');
+                if (src) {
+                    img.setAttribute('src', src.replace(/-(\d+)x(\d+)\.(jpg|jpeg|png|webp)/g, '.$3'));
+                }
+            });
+
+            body.querySelectorAll('p').forEach(p => p.classList.add('u15-description'));
+        }
+    } catch (error) {
+        console.error('Błąd:', error);
+        container.innerHTML = '<p class="u15-status">Błąd ładowania danych grupy U-15.</p>';
+    }
+}
+
+
+window.addEventListener('load', () => {
+    loadU15GroupData();
+}); 
+
+
+// -----------------u-17---------------- //
+
+async function loadU17GroupData() {
+    const container = document.getElementById('u17-group-container');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/akademia_u19_u13/164');
+        
+        if (!response.ok) throw new Error('Błąd pobierania данных');
+        
+        const data = await response.json();
+
+        if (data && data.content) {
+            let htmlContent = data.content.rendered
+                .replace(/style="[^"]*"/g, "")
+                .replace(/-(\d+)x(\d+)\.(jpg|jpeg|png|webp)/g, '.$3');
+
+            container.innerHTML = `
+                <div class="academy-u17-card">
+                    <h2 class="academy-u17-title">${data.title.rendered}</h2>
+                    <div class="academy-u17-body">
+                        ${htmlContent}
+                    </div>
+                </div>
+            `;
+
+            const body = container.querySelector('.academy-u17-body');
+
+            body.querySelectorAll('img').forEach(img => {
+                img.removeAttribute('srcset');
+                img.removeAttribute('sizes');
+                img.removeAttribute('width');
+                img.removeAttribute('height');
+                img.classList.add('u17-team-img');
+
+                let src = img.getAttribute('src');
+                if (src) {
+                    img.setAttribute('src', src.replace(/-(\d+)x(\d+)\.(jpg|jpeg|png|webp)/g, '.$3'));
+                }
+            });
+
+            body.querySelectorAll('p').forEach(p => p.classList.add('u17-description'));
+        }
+    } catch (error) {
+        console.error('Ошибка:', error);
+        container.innerHTML = '<p class="u17-status">Błąd ładowania danych grupy U-17.</p>';
+    }
+}
+
+
+window.addEventListener('load', () => {
+    loadU17GroupData();
+}); 

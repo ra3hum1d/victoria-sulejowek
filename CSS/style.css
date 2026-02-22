@@ -227,6 +227,7 @@ body.has-fixed-header {
 
 .header-box1-logo{
   width: 125px;
+  margin-left: 60px;
   object-fit: contain;
   /* margin-top: 0px;
   margin-left: 20px; */
@@ -444,6 +445,25 @@ body.has-fixed-header {
   text-align: center;
 }
 
+.match-info-text{
+      display: flex;
+  justify-content: center;
+  color: #E0A458;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+  text-align: center;
+}
+
+.match-details{
+        display: flex;
+  justify-content: center;
+  color: #E0A458;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: Bebas Neue;
+  text-align: center;
+}
 
 
 
@@ -464,6 +484,7 @@ body.has-fixed-header {
   font-size: 20px;
   font-family: Bebas Neue;
 }
+
 
 
 
@@ -528,6 +549,93 @@ body.has-fixed-header {
   font-size: 20px;
   font-family: Bebas Neue;
 }
+
+
+
+
+
+
+.junior-v2-main-wrapper {
+    min-height: 30px; /* Резервує місце під текст */
+}
+
+.junior-v2-status {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+}
+
+.junior-v2-box {
+    display: block;
+    margin: 0;
+}
+
+.junior-v2-text {
+    display: flex;
+  justify-content: center;
+  color: #E0A458;
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.junior-v2-main-wrapper {
+    display: block;
+    margin: 10px 0;
+}
+
+.junior-v2-status {
+    font-size: 13px;
+    color: #999;
+}
+
+.junior-v2-box {
+    padding: 5px 0;
+}
+
+.junior-v2-text {
+    display: flex;
+  justify-content: center;
+  color: #E0A458;
+
+  font-size: 20px;
+  font-family: Bebas Neue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

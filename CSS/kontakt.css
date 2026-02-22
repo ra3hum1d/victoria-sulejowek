@@ -231,6 +231,7 @@ body.has-fixed-header {
 
 .header-box1-logo{
   width: 125px;
+    margin-left: 60px;
   object-fit: contain;
   /* margin-top: 0px;
   margin-left: 20px; */
@@ -1197,4 +1198,71 @@ hr{
 }
 
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-main-wrapper {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #161f30;
+}
+
+.contact-title {
+        text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 37px;
+    color: #4e6cf5;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.contact-line {
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 27px;
+    color: #ffffff;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+/* Выделение названия клуба */
+.contact-line:first-child {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contact-body,h3{
+          text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 29px;
+    color: #4e6cf5;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
 }

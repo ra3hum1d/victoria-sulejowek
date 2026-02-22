@@ -183,24 +183,35 @@ async function initVerticalSponsorSlider() {
 /**
  * 3. NAZWA MECZU (Drużyny)
  */
-async function loadNextMatchTitle() {
-    const teamsElement = document.getElementById('match-teams');
-    if (!teamsElement) return;
+async function loadNextMatchContent() {
+    const container = document.getElementById('next-match-container');
+    if (!container) return;
 
     try {
-        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/terminarz?per_page=1');
-        const matches = await response.json();
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/nast_pny_mecz/17460');
+        if (!response.ok) throw new Error('Błąd API');
+        
+        const data = await response.json();
 
-        if (matches && matches.length > 0) {
-            teamsElement.innerText = decodeHtml(matches[0].title.rendered);
-        } else {
-            teamsElement.innerText = "Brak zaplanowanych meczów";
+        if (data && data.content && data.content.rendered) {
+            let matchText = data.content.rendered.replace(/<\/?[^>]+(>|$)/g, "").trim();
+
+            container.innerHTML = `
+                <div class="match-info-box">
+                    <p class="match-details">${matchText}</p>
+                </div>
+            `;
         }
-    } catch (e) { 
-        console.error('Błąd ładowania nazwy meczu:', e); 
-        teamsElement.innerText = "Błąd ładowania danych";
+    } catch (error) {
+        console.error('Błąd:', error);
+        container.innerHTML = '';
     }
 }
+
+
+window.addEventListener('load', () => {
+    loadNextMatchContent();
+}); 
 
 /**
  * 4. MIEJSCE I CZAS (Lokalizacja)
@@ -234,6 +245,160 @@ async function loadMatchLocation() {
         locationElement.innerText = "Błąd danych";
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function loadJuniorMatchContent() {
+    const container = document.getElementById('next-match-container-junior');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/terminarz/9637');
+        if (!response.ok) throw new Error('Błąd API');
+        
+        const data = await response.json();
+
+        if (data && data.content && data.content.rendered) {
+            let matchText = data.content.rendered.replace(/<\/?[^>]+(>|$)/g, "").trim();
+
+            container.innerHTML = `
+                <div class="junior-v2-box">
+                    <p class="junior-v2-text">${matchText}</p>
+                </div>
+            `;
+        }
+    } catch (error) {
+        console.error('Błąd:', error);
+        container.innerHTML = '';
+    }
+}
+
+
+window.addEventListener('load', () => {
+    loadJuniorMatchContent();
+}); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function loadJuniorMatchPip() {
+    const container = document.getElementById('junior-match-container');
+    if (!container) return;
+
+    try {
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/terminarz/15927');
+        if (!response.ok) throw new Error('Błąd API');
+        
+        const data = await response.json();
+
+        if (data && data.content && data.content.rendered) {
+            let matchText = data.content.rendered.replace(/<\/?[^>]+(>|$)/g, "").trim();
+
+            container.innerHTML = `
+                <div class="junior-v2-box">
+                    <p class="junior-v2-text">${matchText}</p>
+                </div>
+            `;
+        }
+    } catch (error) {
+        console.error('Błąd:', error);
+        container.innerHTML = '';
+    }
+}
+
+
+window.addEventListener('load', () => {
+    loadJuniorMatchPip();
+}); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * 5. SKRYPTY NAGŁÓWKA I WIDEO

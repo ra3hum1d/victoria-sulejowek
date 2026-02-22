@@ -237,6 +237,7 @@ body.has-fixed-header {
 
 .header-box1-logo {
     width: 125px;
+      margin-left: 60px;
     object-fit: contain;
     /* margin-top: 0px;
   margin-left: 20px; */
