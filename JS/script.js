@@ -466,3 +466,147 @@ filter.addEventListener('click', () => {
     document.querySelectorAll('.has-dropdown').forEach(el => el.classList.remove('active'));
     filter.classList.remove('show');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let currentPage = 1;
+const perPage = 6;
+
+// Функція для перемикання тексту
+window.toggleExpand = function(btn, index) {
+    const textContainer = document.getElementById(`text-${index}`);
+    const isExpanded = textContainer.classList.contains('expanded');
+    
+    if (isExpanded) {
+        textContainer.classList.remove('expanded');
+        btn.innerText = 'Czytaj więcej';
+    } else {
+        textContainer.classList.add('expanded');
+        btn.innerText = 'Zwiń'; // Текст кнопки після розгортання
+    }
+};
+
+async function loadMainNews(page = 1) {
+    const container = document.getElementById('news-list-container');
+    if (!container) return;
+    
+    container.innerHTML = '<div style="padding:40px; text-align:center;">Ładowanie...</div>';
+
+    try {
+        const response = await fetch(`https://www.victoriasulejowek.pl/wp-json/wp/v2/aktualnosci_glowan?page=${page}&per_page=${perPage}&_embed`);
+        const posts = await response.json();
+        const totalPages = response.headers.get('X-WP-TotalPages') || 1;
+        
+        container.innerHTML = ''; 
+
+        posts.forEach((post, index) => {
+            const title = post.title?.rendered || "Brak tytułu";
+            const fullContent = post.content?.rendered || "Brak treści";
+            
+            let imgUrl = 'https://via.placeholder.com/240x180?text=Victoria';
+            if (post._embedded?.['wp:featuredmedia']?.[0]?.source_url) {
+                imgUrl = post._embedded['wp:featuredmedia'][0].source_url;
+            }
+
+            container.innerHTML += `
+                <div class="news-card-v2">
+                    <div class="news-img-wrapper">
+                        <img src="${imgUrl}" alt="${title}">
+                    </div>
+                    <div class="news-content-col">
+                        <h2 class="news-title-v2">${title}</h2>
+                        <div id="text-${index}" class="news-text-container">
+                            ${fullContent}
+                        </div>
+                        <button class="read-more-btn" onclick="toggleExpand(this, ${index})">
+                            Czytaj więcej
+                        </button>
+                    </div>
+                </div>
+            `;
+        });
+
+        document.getElementById('page-info').innerText = `Strona ${page} z ${totalPages}`;
+        document.getElementById('prev-page').disabled = (page <= 1);
+        document.getElementById('next-page').disabled = (page >= totalPages);
+        
+    } catch (error) {
+        container.innerHTML = '<div>Błąd ładowania.</div>';
+    }
+}
+
+// Пагінація
+// Пагінація з розумним скролом
+document.getElementById('prev-page')?.addEventListener('click', () => { 
+    if (currentPage > 1) { 
+        currentPage--; 
+        loadMainNews(currentPage); 
+        // Скрол до контейнера новин
+        document.getElementById('news-list-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } 
+});
+
+document.getElementById('next-page')?.addEventListener('click', () => { 
+    currentPage++; 
+    loadMainNews(currentPage); 
+    // Скрол до контейнера новин
+    document.getElementById('news-list-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+loadMainNews(currentPage);

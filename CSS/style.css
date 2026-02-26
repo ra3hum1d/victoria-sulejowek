@@ -386,7 +386,7 @@ body.has-fixed-header {
 
   width: 100%;
   max-width: 400px;
-  height: auto;
+  height: 454px;
 
   background-color: #202c44;
   display: flex;
@@ -653,13 +653,117 @@ body.has-fixed-header {
   margin-left: 160px;
 }
 
-/* ------------slider---------- */
+/* ------------aktual---------- */
 
 
 
+/* Загальний контейнер для центрування всієї секції */
+.news-main-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex; /* Повертаємо flex для центрування */
+    justify-content: center; 
+    gap: 30px;
+    font-family: 'Arial', sans-serif;
+}
 
+#news-list-container {
+    flex: 0 1 800px; /* Обмежуємо ширину списку новин для кращого вигляду по центру */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.news-card-v2 {
+    display: flex;
+    background-color: #202c44;
+    border: 1px solid #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
 
+.news-img-wrapper {
+    flex: 0 0 240px;
+    padding: 10px;
+}
+
+.news-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-content-col {
+    padding: 20px;
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-title-v2 {
+        max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 29px;
+    color: #ececec;
+    transition: 0.3s;
+    text-align: justify;
+}
+
+/* Контейнер для тексту з обмеженням висоти */
+.news-text-container {
+    line-height: 1.6;
+    font-family: Bebas Neue;
+    font-size: 19px;
+    color: #f1e85f;
+    overflow: hidden;
+    max-height: 75px; /* Показувати приблизно 3 рядки */
+    transition: max-height 0.3s ease;
+    margin-bottom: 40px;
+}
+
+/* Клас, який додасть JS при натисканні */
+.news-text-container.expanded {
+    max-height: 2000px; /* Достатньо для повного тексту */
+}
+
+/* Стиль кнопки замість посилання */
+.read-more-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-family: Bebas Neue;
+    font-size: 19px;
+    color: #f3fca6;
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+}
+
+.pagination-container {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.pag-btn {
+    padding: 8px 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
 
 
 
@@ -810,6 +914,7 @@ body.has-fixed-header {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 400px;
+  margin-bottom: 130px;
 
   background-position: center;
   display: flex;
