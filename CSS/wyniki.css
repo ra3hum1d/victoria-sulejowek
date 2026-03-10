@@ -1015,7 +1015,7 @@ body.has-fixed-header {
 .main-content {
     display: flex;
     justify-content: center;
-    height: 1400px;
+    height: 100%;
     margin-top: 300px;
 
 }

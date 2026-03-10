@@ -610,3 +610,100 @@ document.getElementById('next-page')?.addEventListener('click', () => {
 });
 
 loadMainNews(currentPage);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// cookie //
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const banner = document.getElementById('cookie-banner');
+    const btn = document.getElementById('accept-cookies');
+
+    if (!localStorage.getItem('cookiesAccepted')) {
+        banner.style.visibility = 'visible';
+    }
+
+    btn.addEventListener('click', function() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        banner.style.display = 'none';
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function loadSponsors() {
+    const container = document.getElementById('sponsors-grid');
+    if (!container) return;
+
+    try {
+        // Додаємо _embed, щоб отримати посилання на зображення разом із даними спонсорів
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/sponsorzy?_embed&per_page=20');
+        const sponsors = await response.json();
+
+        let html = '';
+        sponsors.forEach(sponsor => {
+            // Перевіряємо, чи є у спонсора встановлене головне зображення
+            const imageUrl = sponsor._embedded && 
+                             sponsor._embedded['wp:featuredmedia'] ? 
+                             sponsor._embedded['wp:featuredmedia'][0].source_url : 
+                             ''; // Порожньо, якщо картинки немає
+
+            if (imageUrl) {
+                html += `
+                    <div class="sponsor-item">
+                        <img src="${imageUrl}" alt="${sponsor.title.rendered}" title="${sponsor.title.rendered}">
+                    </div>
+                `;
+            }
+        });
+
+        container.innerHTML = html;
+    } catch (e) {
+        console.error('Błąd ładowania sponsorów:', e);
+    }
+}
+
+
+window.addEventListener('load', () => {
+    loadSponsors();
+}); 

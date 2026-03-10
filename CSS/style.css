@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-html, body {
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+html,
+body {
   margin: 0;
   padding: 0;
   background-color: #161f30;
   overflow-x: hidden;
 }
 
-.body{
+.body {
   padding-top: 149px;
 }
 
@@ -25,19 +30,20 @@ body.has-fixed-header {
 
 
 .blur-filter {
-  background-color: rgba(0, 0, 0, 0.6); /* Напівпрозорий чорний */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Напівпрозорий чорний */
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
   z-index: 5;
-  
+
   /* Плавність */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
-  
+
   /* Ефект розмиття фону (опціонально) */
   backdrop-filter: blur(4px);
 }
@@ -47,18 +53,19 @@ body.has-fixed-header {
   opacity: 1;
   visibility: visible;
 }
+
 /* ---------------------------------------------- */
 
 /* --------header-------- */
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: 0.3s;
   width: 100%;
   height: 149px;
-  background-color: #1B263B ;
+  background-color: #1B263B;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -66,12 +73,12 @@ body.has-fixed-header {
   /* margin-bottom: 15px; */
 }
 
-.header-list-item{
+.header-list-item {
   margin-right: 24px;
 }
 
 
-.Seniorzy-list-title{
+.Seniorzy-list-title {
   text-decoration: none;
   font-family: Bebas Neue;
   font-size: 27px;
@@ -79,20 +86,20 @@ body.has-fixed-header {
   transition: 0.3s;
 }
 
-.Seniorzy-list-link{
+.Seniorzy-list-link {
   text-decoration: none;
   color: #ffffff;
   font-family: Bebas Neue;
   font-size: 22px;
 }
 
-.Seniorzy-list{
+.Seniorzy-list {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.Seniorzy-btw-line{
+.Seniorzy-btw-line {
   margin-top: 30px;
   margin-bottom: 20px;
 }
@@ -102,20 +109,20 @@ body.has-fixed-header {
 
 
 
-.Akademia-list{
+.Akademia-list {
   display: flex;
   gap: 10px;
 }
 
-.Akademia-list-unfo{
+.Akademia-list-unfo {
   flex-direction: column;
 }
 
-.Akademia-list-menu{
+.Akademia-list-menu {
   width: 400px;
 }
 
-.Seniorzy-list-main{
+.Seniorzy-list-main {
   margin-top: 20px;
 }
 
@@ -136,13 +143,13 @@ body.has-fixed-header {
 
 
 
-.header.header-scrolled{
+.header.header-scrolled {
   height: 95px;
   opacity: 0.6;
   /* backdrop-filter: blur(8px); */
 }
 
-.hero-wrap.hero-wrap-scrolled{
+.hero-wrap.hero-wrap-scrolled {
   background-color: brown;
 }
 
@@ -150,7 +157,7 @@ body.has-fixed-header {
 
 
 
-.header-list-link{
+.header-list-link {
   text-decoration: none;
   font-family: Bebas Neue;
   font-size: 37px;
@@ -158,7 +165,7 @@ body.has-fixed-header {
   transition: 0.3s;
 }
 
-.header-list-link:hover{
+.header-list-link:hover {
   text-decoration: none;
   font-family: Bebas Neue;
   font-size: 37px;
@@ -166,7 +173,7 @@ body.has-fixed-header {
   transition: 0.3s;
 }
 
-.header-list{
+.header-list {
   display: flex;
   flex-direction: row;
   gap: 50px;
@@ -174,13 +181,14 @@ body.has-fixed-header {
   /* margin-left: 560px; */
   z-index: 99999;
 }
-.header-box1{
+
+.header-box1 {
   width: 9%;
   height: 95%;
   display: flex;
 }
 
-.header-box2{
+.header-box2 {
   /* width: 26%;
   height: 95%;
   display: flex;
@@ -192,7 +200,7 @@ body.has-fixed-header {
   position: relative;
 }
 
-.header-box2-bg-header-img{
+.header-box2-bg-header-img {
   /* width: 36%;
   height: 149px;
   position: fixed;
@@ -208,7 +216,7 @@ body.has-fixed-header {
   z-index: 0;
 }
 
-.header-box2-liga-maz{
+.header-box2-liga-maz {
   z-index: 1;
   /* position: absolute;
   right: 50px; */
@@ -216,7 +224,7 @@ body.has-fixed-header {
   object-fit: contain;
 }
 
-.header-box2-srebrny-cert-img{
+.header-box2-srebrny-cert-img {
   z-index: 1;
   /* position: absolute;
   right: 230px; */
@@ -225,7 +233,7 @@ body.has-fixed-header {
 }
 
 
-.header-box1-logo{
+.header-box1-logo {
   width: 125px;
   margin-left: 60px;
   object-fit: contain;
@@ -257,30 +265,33 @@ body.has-fixed-header {
 
 .hero-swiper {
   width: 100%;
-  height: 100%;
+  height: 86%;
   border-radius: 4px 0 0 4px;
   overflow: hidden;
   position: relative;
-  margin-top: 90px;
+  margin-top: 0px;
 }
 
 .hero-swiper::after {
   content: "";
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
   border-radius: 4px 0 0 4px;
-  box-shadow: inset 0 0 150px rgba(0,0,0,0.6);
-  z-index: 10; 
+  box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.6);
+  z-index: 10;
 }
 
 .hero-swiper .overlay {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.2); 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
   z-index: 10;
   pointer-events: none;
   border-radius: 4px 0 0 4px;
@@ -296,8 +307,11 @@ body.has-fixed-header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-    mix-blend-mode: multiply; /* потемнює зображення */
+  mix-blend-mode: multiply;
+  /* потемнює зображення */
 }
+
+
 
 
 
@@ -313,7 +327,7 @@ body.has-fixed-header {
 .hero-swiper .swiper-pagination-bullet {
   width: 40px;
   height: 6px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   margin: 0 5px !important;
   transition: 0.3s;
 }
@@ -322,7 +336,7 @@ body.has-fixed-header {
 .hero-swiper .swiper-pagination-bullet {
   width: 40px;
   height: 6px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   margin: 0 5px !important;
   transition: 0.3s;
@@ -339,15 +353,15 @@ body.has-fixed-header {
 
 
 
-.hero-wrap{
+.hero-wrap {
   width: 100%;
   display: flex;
   flex-direction: row;
   margin-top: 70px;
 }
 
-.hero-aside{
-    display: flex;
+.hero-aside {
+  display: flex;
   justify-content: center;
   float: left;
   height: 900px;
@@ -366,11 +380,11 @@ body.has-fixed-header {
 
 
 
-.hero-match-wrap-container{
+.hero-match-wrap-container {
   display: flex;
   flex-direction: column;
   margin-left: 40px;
-  
+
 
 }
 
@@ -380,8 +394,8 @@ body.has-fixed-header {
 
 
 
-.hero-match-container{
-  
+.hero-match-container {
+
   margin-top: -60px;
 
   width: 100%;
@@ -395,23 +409,23 @@ body.has-fixed-header {
 
 }
 
-.hero-match-inside{
-  
-  
+.hero-match-inside {
+
+
   border: 0.5px solid #E0A458;
   width: 380px;
   height: 440px;
   background-color: #23324e;
 }
 
-.stadion-svg{
+.stadion-svg {
   width: 100px;
   fill: white;
   margin-left: 140px;
 
 }
 
-.ball-svg{
+.ball-svg {
   margin-top: 20px;
   margin-bottom: 10px;
   width: 90px;
@@ -419,14 +433,14 @@ body.has-fixed-header {
   margin-left: 140px;
 }
 
-.next-match-line{
+.next-match-line {
   border: 0.1px solid #E0A458;
 
-  
+
 }
 
 
-.next-match-title{
+.next-match-title {
   display: flex;
   justify-content: center;
   color: white;
@@ -435,8 +449,8 @@ body.has-fixed-header {
   font-family: Bebas Neue;
 }
 
-.next-match-title-inside{
-    display: flex;
+.next-match-title-inside {
+  display: flex;
   justify-content: center;
   color: #E0A458;
   margin-top: 10px;
@@ -445,8 +459,8 @@ body.has-fixed-header {
   text-align: center;
 }
 
-.match-info-text{
-      display: flex;
+.match-info-text {
+  display: flex;
   justify-content: center;
   color: #E0A458;
   margin-top: 10px;
@@ -455,8 +469,8 @@ body.has-fixed-header {
   text-align: center;
 }
 
-.match-details{
-        display: flex;
+.match-details {
+  display: flex;
   justify-content: center;
   color: #E0A458;
   margin-top: 10px;
@@ -467,8 +481,8 @@ body.has-fixed-header {
 
 
 
-.next-match-paragraph{
-    display: flex;
+.next-match-paragraph {
+  display: flex;
   justify-content: center;
   color: #E0A458;
   margin-top: 40px;
@@ -476,8 +490,8 @@ body.has-fixed-header {
   font-family: Bebas Neue;
 }
 
-.next-match-paragraph-first{
-      display: flex;
+.next-match-paragraph-first {
+  display: flex;
   justify-content: center;
   color: #E0A458;
   margin-top: 30px;
@@ -499,8 +513,8 @@ body.has-fixed-header {
 /* next-match-junior */
 
 
-.hero-match-container-jun{
-  margin-top:20px;
+.hero-match-container-jun {
+  margin-top: 20px;
 
   width: 395px;
   height: 365px;
@@ -511,7 +525,7 @@ body.has-fixed-header {
 }
 
 
-.hero-match-inside-jun{
+.hero-match-inside-jun {
   border: 0.5px solid #E0A458;
   width: 380px;
   height: 350px;
@@ -519,7 +533,7 @@ body.has-fixed-header {
 }
 
 
-.next-match-title-jun{
+.next-match-title-jun {
   display: flex;
   justify-content: center;
   color: white;
@@ -528,8 +542,8 @@ body.has-fixed-header {
   font-family: Bebas Neue;
 }
 
-.next-match-paragraph-first-jun{
-    display: flex;
+.next-match-paragraph-first-jun {
+  display: flex;
   justify-content: center;
   color: #E0A458;
   margin-top: 20px;
@@ -541,8 +555,8 @@ body.has-fixed-header {
 
 
 
-.next-match-paragraph-jun{
-    display: flex;
+.next-match-paragraph-jun {
+  display: flex;
   justify-content: center;
   color: #E0A458;
   margin-top: 20px;
@@ -556,22 +570,23 @@ body.has-fixed-header {
 
 
 .junior-v2-main-wrapper {
-    min-height: 30px; /* Резервує місце під текст */
+  min-height: 30px;
+  /* Резервує місце під текст */
 }
 
 .junior-v2-status {
-    font-size: 14px;
-    color: #888;
-    font-style: italic;
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
 }
 
 .junior-v2-box {
-    display: block;
-    margin: 0;
+  display: block;
+  margin: 0;
 }
 
 .junior-v2-text {
-    display: flex;
+  display: flex;
   justify-content: center;
   color: #E0A458;
   font-size: 20px;
@@ -596,21 +611,21 @@ body.has-fixed-header {
 
 
 .junior-v2-main-wrapper {
-    display: block;
-    margin: 10px 0;
+  display: block;
+  margin: 10px 0;
 }
 
 .junior-v2-status {
-    font-size: 13px;
-    color: #999;
+  font-size: 13px;
+  color: #999;
 }
 
 .junior-v2-box {
-    padding: 5px 0;
+  padding: 5px 0;
 }
 
 .junior-v2-text {
-    display: flex;
+  display: flex;
   justify-content: center;
   color: #E0A458;
 
@@ -639,14 +654,14 @@ body.has-fixed-header {
 
 
 
-.stadion-svg-jun{
+.stadion-svg-jun {
   width: 70px;
   fill: #E0A458;
   margin-left: 155px;
 }
 
-.ball-svg-jun{
-    margin-top: 20px;
+.ball-svg-jun {
+  margin-top: 20px;
   margin-bottom: 10px;
   width: 60px;
   fill: #E0A458;
@@ -659,110 +674,162 @@ body.has-fixed-header {
 
 /* Загальний контейнер для центрування всієї секції */
 .news-main-wrapper {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: flex; /* Повертаємо flex для центрування */
-    justify-content: center; 
-    gap: 30px;
-    font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  /* Повертаємо flex для центрування */
+  justify-content: center;
+  gap: 30px;
+  font-family: 'Arial', sans-serif;
 }
 
 #news-list-container {
-    flex: 0 1 800px; /* Обмежуємо ширину списку новин для кращого вигляду по центру */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  flex: 0 1 800px;
+  /* Обмежуємо ширину списку новин для кращого вигляду по центру */
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+.news-text-container p {
+  font-family: Inter;
+  color: white;
+  font-size: 17px;
+}
+
+.news-content-col h2 {
+  color: #E0A458;
+}
+
+
+
+
+.news-img-wrapper img {
+  border-radius: 10px;
 }
 
 .news-card-v2 {
-    display: flex;
-    background-color: #202c44;
-    border: 1px solid #ffffff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    overflow: hidden;
-    transition: all 0.3s ease;
+  display: flex;
+  background-color: #202c44;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .news-img-wrapper {
-    flex: 0 0 240px;
-    padding: 10px;
+  flex: 0 0 240px;
+  padding: 10px;
 }
 
 .news-img-wrapper img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .news-content-col {
-    padding: 20px;
-    flex: 1;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  padding: 20px;
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .news-title-v2 {
-        max-width: 900px;
-    margin: 0 auto;
-    line-height: 1.8;
-    text-decoration: none;
-    font-family: Bebas Neue;
-    font-size: 29px;
-    color: #ececec;
-    transition: 0.3s;
-    text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-decoration: none;
+  font-family: Bebas Neue;
+  font-size: 29px;
+  color: #ececec;
+  transition: 0.3s;
+  text-align: justify;
 }
 
 /* Контейнер для тексту з обмеженням висоти */
 .news-text-container {
-    line-height: 1.6;
-    font-family: Bebas Neue;
-    font-size: 19px;
-    color: #f1e85f;
-    overflow: hidden;
-    max-height: 75px; /* Показувати приблизно 3 рядки */
-    transition: max-height 0.3s ease;
-    margin-bottom: 40px;
+  line-height: 1.6;
+  font-family: Bebas Neue;
+  font-size: 19px;
+  color: #f1e85f;
+  overflow: hidden;
+  max-height: 75px;
+  /* Показувати приблизно 3 рядки */
+  transition: max-height 0.3s ease;
+  margin-bottom: 40px;
 }
 
 /* Клас, який додасть JS при натисканні */
 .news-text-container.expanded {
-    max-height: 2000px; /* Достатньо для повного тексту */
+  max-height: 2000px;
+  /* Достатньо для повного тексту */
 }
 
 /* Стиль кнопки замість посилання */
 .read-more-btn {
-    position: absolute;
-    bottom: 15px;
-    right: 20px;
-    font-family: Bebas Neue;
-    font-size: 19px;
-    color: #f3fca6;
-    background: none;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 5px;
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-family: Inter;
+  font-size: 16px;
+
+  color: white;
+  background: none;
+  border: none;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 5px;
 }
 
 .read-more-btn:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .pagination-container {
-    margin-top: 20px;
-    text-align: center;
-    width: 100%;
-    padding-bottom: 40px;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 40px;
 }
 
 .pag-btn {
-    padding: 8px 20px;
-    background: #fff;
-    border: 1px solid #ccc;
-    cursor: pointer;
+  padding: 8px 20px;
+  background-color: #1B263B;
+  font-family: Bebas Neue;
+  font-size: 27px;
+  color: #a07f54;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#page-info {
+  font-family: Bebas Neue;
+  font-size: 23px;
+  color: white;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 
@@ -804,7 +871,7 @@ body.has-fixed-header {
 
 /* ------------- */
 
-.main{
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -813,11 +880,11 @@ body.has-fixed-header {
   background-color: #161f30;
 }
 
-.sul-herb{
+.sul-herb {
   width: 100px;
 }
 
-.map-sul{
+.map-sul {
   float: right;
   margin-top: 100px;
   margin-right: 40px;
@@ -826,78 +893,93 @@ body.has-fixed-header {
 
 }
 
-.main-map-title{
+.main-map-title {
   font-family: Bebas Neue;
   margin-top: 100px;
   font-size: 60px;
   color: white;
- 
+
 }
 
 
-.title-wrap{
+.title-wrap {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.main-line{
+.main-line {
   width: 1200px;
   margin-top: 100px;
 }
 
 
-.klub-info{
-    font-family: Bebas Neue;
+.klub-info {
+  font-family: Inter;
   font-size: 30px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.klub-info:hover {
+  font-family: Inter;
+  color: white;
   color: rgb(192, 192, 192);
   text-decoration: none;
   transition: 0.3s;
 }
 
-.klub-info:hover{
-    font-family: Bebas Neue;
-  font-size: 26px;
-  color: white;
-  text-decoration: none;
-    transition: 0.3s;
-}
-
-.google-map{
+.google-map {
   display: flex;
 }
 
-.klub-list{
-  text-align: center;
+.klub-list {
+  text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  justify-content: center;
+  gap: 70px;
   height: 600px;
 
 
 
 }
 
-.klub-title{
-  font-family: Bebas Neue;
-  font-size: 34px;
-  color: white;
-
-  text-decoration: none;
-    transition: 0.3s;
-    margin-bottom: 80px;
-    margin-top: 40px;
+.klub-list-item {
+  display: flex;
+  align-items: center;
 }
 
-.klub-info-container{
+
+
+.icon-team {
+  width: 36px;
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.klub-info-container {
   margin-top: 109px;
   margin-left: 40px;
+  margin-bottom: 0px;
   width: 700px;
   height: 585px;
   padding: 30px;
-  border: 1px solid white;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 
@@ -906,7 +988,7 @@ body.has-fixed-header {
 
 /* ------------video section ----------- */
 
-.video-cont{
+.video-cont {
   opacity: 0.5;
   width: 100%;
   height: 900px;
@@ -923,7 +1005,7 @@ body.has-fixed-header {
 }
 
 
-.play-video-button{
+.play-video-button {
   width: 150px;
   height: 70px;
   border: 0px;
@@ -933,8 +1015,8 @@ body.has-fixed-header {
 
   font-family: Bebas Neue;
   font-size: 40px;
-  
-  
+
+
 }
 
 
@@ -949,7 +1031,7 @@ body.has-fixed-header {
 
 
 
-.info{
+.info {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -960,19 +1042,19 @@ body.has-fixed-header {
 }
 
 
-.info-section-title-cont{
+.info-section-title-cont {
   display: flex;
   margin-top: 50px;
   gap: 40px;
 }
 
-.info-section-line{
+.info-section-line {
   width: 300px;
   height: 0px;
   margin-top: 15px;
 }
 
-.info-section-title{
+.info-section-title {
   color: white;
   font-family: Bebas Neue;
   font-size: 40px;
@@ -985,51 +1067,88 @@ body.has-fixed-header {
 
 
 
-.footer{
+.footer {
   height: 400px;
   width: 100%;
 
 }
 
-.footer-line{
+.footer-line {
   width: 100%;
   float: inline-start;
+  margin: 0px;
 }
 
-.footer-list-link{
-      text-decoration: none;
-    font-family: Bebas Neue;
-    font-size: 24px;
-    color: rgb(192, 192, 192);
-    transition: 0.3s;
+
+
+
+
+footer hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 200px;
 }
 
-.footer-list-title{
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.footer-list-link {
   text-decoration: none;
-    font-family: Bebas Neue;
-    font-size: 24px;
-    color: rgb(192, 192, 192);
-    transition: 0.3s;
+  font-family: Inter;
+
+  font-size: 20px;
+  color: rgb(192, 192, 192);
+  transition: 0.3s;
+}
+
+.footer-list-title {
+  text-decoration: none;
+  font-family: Bebas Neue;
+  font-size: 34px;
+  color: rgb(192, 192, 192);
+  transition: 0.3s;
+  margin-top: 50px;
+}
+
+.footer-line-hr {
+  margin-left: 0px;
 }
 
 
 
-.footer-container{
+.footer-container {
   width: 100%;
   display: flex;
   gap: 220px;
+  margin-left: 40px;
 }
 
-.footer-list{
+.footer-list {
   margin-left: 50px;
   display: flex;
   flex-direction: column;
-  
+
 }
 
-.first-footer-list{
+.first-footer-list {
   margin-left: 30px;
 }
+
+
+
+
+
+.footer-img {}
+
+
+
+
+
+
 /* ------------------------------------ */
 
 
@@ -1053,55 +1172,71 @@ body.has-fixed-header {
 
 .google-map {
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 
 /* 📱 мобілки */
 @media (max-width: 768px) {
+
+
+  .hero-section {
+    width: 120%;
+  }
+
+
+
+
+
+
+
+
+
+
+
   .google-map {
     flex-direction: column;
     align-items: center;
   }
 
   .klub-info-container {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  margin: 40px auto;
-  padding: 20px;
-}
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 40px auto;
+    padding: 20px;
+  }
 
-/* текст */
-.klub-list {
-  gap: 25px;
-}
+  /* текст */
+  .klub-list {
+    gap: 25px;
+  }
 
-.klub-title {
-  margin-bottom: 30px;
-  margin-top: 0;
-  font-size: 38px;
-}
+  .klub-title {
+    margin-bottom: 30px;
+    margin-top: 0;
+    font-size: 38px;
+  }
 
-.klub-info {
-  font-size: 29px;
-}
+  .klub-info {
+    font-size: 29px;
+  }
 
-/* ---- MAP ---- */
+  /* ---- MAP ---- */
 
-.map-sul {
-  width: 100%;
-  max-width: 100%;
-  height: 300px;
-  margin: 0 auto;
-  float: none;
-  padding: 0;
-  border-radius: 6px;
-}
+  .map-sul {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    float: none;
+    padding: 0;
+    border-radius: 6px;
+  }
 
-/* ---- MAIN LINE ---- */
-.main-line {
-  width: 90%;
-}
+  /* ---- MAIN LINE ---- */
+  .main-line {
+    width: 90%;
+  }
 }
 
 /* ---- INFO BOX ---- */
@@ -1145,13 +1280,11 @@ body.has-fixed-header {
     flex-direction: column;
     gap: 40px;
     align-items: center;
+    margin-left: -10px;
 
-  height: 60vh;
-  min-height: 300px;
-  margin-top: 200px;
-  background-position: center;
-}
+
   }
+}
 
 
 
@@ -1163,12 +1296,12 @@ body.has-fixed-header {
 
 @media (max-width: 768px) {
 
-  .header-list-link{
+  .header-list-link {
     font-size: 20px;
   }
 
 
-  
+
 }
 
 
@@ -1179,6 +1312,9 @@ body.has-fixed-header {
   .footer {
     height: auto;
     padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .footer-container {
@@ -1197,6 +1333,7 @@ body.has-fixed-header {
     height: auto;
   }
 }
+
 /* ============================= */
 /* 🔥 MOBILE / RESPONSIVE FIX (MAX-WIDTH: 768PX) 🔥 */
 /* ============================= */
@@ -1207,118 +1344,140 @@ body.has-fixed-header {
 
 @media (max-width: 768px) {
 
-    /* --- 1. ХЕДЕР (Знімаємо фіксацію) --- */
-    .header {
-        position: relative !important;
-        height: auto !important;
-        flex-direction: column;
-        padding-bottom: 20px;
-        background-color: #1B263B;
-    }
 
-    .body {
-        padding-top: 0 !important;
-    }
+  .news-content-col h2 {
+    color: #E0A458;
+    font-size: 24px;
+  }
 
-    /* --- 2. ЛОГОТИП КЛУБУ (Центруємо) --- */
-    .header-box1 {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 15px 0;
-    }
-    
-    .header-box1-logo {
-        width: 110px;
-        margin: 0;
-    }
 
-    /* --- 3. МЕНЮ (Flex-wrap для переносу рядків) --- */
-    .header-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 15px 25px;
-        margin: 0;
-        padding: 0 10px;
-        width: 100%;
-    }
+  .footer-line-hr {
+    margin-left: 0px;
+    width: 300px;
+  }
 
-    .header-list-item {
-        margin-right: 0;
-    }
 
-    .header-list-link {
-        font-size: 24px !important;
-    }
 
-    /* --- 4. DROPDOWN (Відкривається вниз, розсуваючи контент) --- */
-    .dropdown-menu {
-        position: static !important;
-        width: 100% !important;
-        height: auto !important;
-        background-color: #151d2e;
-        border-top: 1px solid #E0A458;
-        display: none;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        margin-top: 10px;
-        box-shadow: none;
-    }
 
-    .has-dropdown.active .dropdown-menu {
-        display: block;
-    }
 
-    .Seniorzy-cont, 
-    .Akademia-list {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 10px;
-        padding: 10px 0;
-    }
 
-    /* --- 5. ЛОГОТИПИ СПОНСОРІВ (Без білого фону) --- */
-    .header-box2 {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        margin-top: 30px;
-        position: static;
-        order: 1; /* Ставимо в самий низ */
-    }
 
-    /* Прибираємо білу пляму */
-    .header-box2-bg-header-img {
-        display: none !important;
-    }
 
-    /* Показуємо логотипи */
-    .header-box2-srebrny-cert-img {
-          display: block !important;
-        position: static;
-        width: 80px;
-        height: auto;
-        object-fit: contain;
-        margin: 0;
-        border-radius: 5px;
-    }
-     .header-box2-liga-maz{
-   display: block !important;
-        position: static;
-        width: 60px;
-        height: auto;
-        object-fit: contain;
-        margin: 0;
-        border-radius: 5px;
-     }
-  
+
+  /* --- 1. ХЕДЕР (Знімаємо фіксацію) --- */
+  .header {
+    position: relative !important;
+    height: auto !important;
+    flex-direction: column;
+    padding-bottom: 20px;
+    background-color: #1B263B;
+  }
+
+  .body {
+    padding-top: 0 !important;
+  }
+
+  /* --- 2. ЛОГОТИП КЛУБУ (Центруємо) --- */
+  .header-box1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+  }
+
+  .header-box1-logo {
+    width: 110px;
+    margin: 0;
+  }
+
+  /* --- 3. МЕНЮ (Flex-wrap для переносу рядків) --- */
+  .header-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px 25px;
+    margin: 0;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .header-list-item {
+    margin-right: 0;
+  }
+
+  .header-list-link {
+    font-size: 24px !important;
+  }
+
+  /* --- 4. DROPDOWN (Відкривається вниз, розсуваючи контент) --- */
+  .dropdown-menu {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    background-color: #151d2e;
+    border-top: 1px solid #E0A458;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    margin-top: 10px;
+    box-shadow: none;
+  }
+
+  .has-dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .Seniorzy-cont,
+  .Akademia-list {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  /* --- 5. ЛОГОТИПИ СПОНСОРІВ (Без білого фону) --- */
+  .header-box2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    position: static;
+    order: 1;
+    /* Ставимо в самий низ */
+  }
+
+  /* Прибираємо білу пляму */
+  .header-box2-bg-header-img {
+    display: none !important;
+  }
+
+  /* Показуємо логотипи */
+  .header-box2-srebrny-cert-img {
+    display: block !important;
+    position: static;
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 5px;
+  }
+
+  .header-box2-liga-maz {
+    display: block !important;
+    position: static;
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 5px;
+  }
+
 }
 
 
@@ -1332,37 +1491,36 @@ body.has-fixed-header {
 
 
 @media (min-width: 600px) and (max-width: 899px) {
-  .header-box2{
-  height: 100%;
-}
+  .header-box2 {
+    height: 100%;
+  }
 
-.header-box2-bg-header-img{
-  height: 100%;
-}
-
-
-.header-list-link{
-  font-size: 35px;
-}
-
-.header-list{
-  gap: 25px;
-  margin-left: 40px;
-  flex-wrap: wrap;
-  width: 450px;
-  
-}
-
-.footer-container{
-  width: 60%;
-  display: flex;
-  gap: 70px;
-}
+  .header-box2-bg-header-img {
+    height: 100%;
+  }
 
 
-.header.header-scrolled{
+  .header-list-link {
+    font-size: 35px;
+  }
 
-}
+  .header-list {
+    gap: 25px;
+    margin-left: 40px;
+    flex-wrap: wrap;
+    width: 450px;
+
+  }
+
+  .footer-container {
+    display: flex;
+    gap: 70px;
+  }
+
+
+
+
+  .header.header-scrolled {}
 }
 
 
@@ -1376,110 +1534,188 @@ body.has-fixed-header {
 
 
 
-.header-box2{
-  height: 100%;
+  .header-box2 {
+    height: 100%;
+  }
+
+  .header-box2-bg-header-img {
+    height: 100%;
+  }
+
+
+  .header-list-link {
+    font-size: 35px;
+  }
+
+  .header-list {
+    gap: 25px;
+    margin-left: 40px;
+    flex-wrap: wrap;
+    width: 450px;
+
+  }
+
+  .footer-container {
+    width: 60%;
+    display: flex;
+    gap: 70px;
+  }
+
+
+
+
 }
 
-.header-box2-bg-header-img{
-  height: 100%;
-}
+@media (min-width: 770px) and (max-width: 924px) {
 
+  .header-list {
+    gap: 35px;
+    margin-right: 60px;
+    display: flex;
+    margin-left: 140px;
+    flex-wrap: wrap;
+  }
 
-.header-list-link{
-  font-size: 35px;
-}
-
-.header-list{
-  gap: 25px;
-  margin-left: 40px;
-  flex-wrap: wrap;
-  width: 450px;
-  
-}
-
-.footer-container{
-  width: 60%;
-  display: flex;
-  gap: 70px;
-}
-
-
-
+  .header-list-link {
+    font-size: 25px;
+  }
 
 }
 
 
+@media (min-width: 1440px) and (max-width: 1545px) {
+
+  .header-list {
+    gap: 35px;
+    margin-right: 60px;
+    display: flex;
+    margin-left: 90px;
+    flex-wrap: wrap;
+  }
+
+  footer ul {
+    margin-right: -60px;
+  }
 
 
+}
+
+
+@media (min-width: 925px) and (max-width: 1200px) {
+
+  .header.header-scrolled {
+    font-size: 15px;
+  }
+
+  .header-list-link {
+    font-size: 25px;
+  }
+}
+
+
+@media (min-width: 836px) and (max-width: 1050px) {
+
+  footer ul {
+    margin-right: -60px;
+  }
+
+
+
+
+}
+
+@media (min-width: 770px) and (max-width: 843px) {
+
+  .header-list-link {
+    font-size: 20px;
+  }
+
+  .footer-container {
+    width: 600px;
+    display: flex;
+
+
+  }
+
+  .footer-first-list a {
+    font-size: 15px;
+  }
+
+  .footer-first-list h2 {
+    font-size: 30px;
+  }
+
+  .footer-first-list hr {
+    width: 100px;
+  }
+
+  .footer-list-conts a {
+    font-size: 15px;
+  }
+
+  .footer-list-conts h2 {
+    font-size: 30px;
+  }
+
+  .footer-list-conts hr {
+    width: 100px;
+  }
+
+
+}
+
+
+@media (min-width: 1546px) and (max-width: 1596px) {
+
+  footer ul {
+    margin-right: -60px;
+  }
+
+
+}
 
 
 
 
 @media (min-width: 1200px) and (max-width: 1439px) {
-.header-box2{
-  height: 100%;
-}
+  .header-box2 {
+    height: 100%;
+  }
 
-.header-box2-bg-header-img{
-  height: 100%;
-}
-
-
-.header-list-link{
-  font-size: 30px;
-}
-
-.header-list{
-  gap: 35px;
-  margin-right: 60px;
-}
-
-.footer-container{
-  width: 100%;
-  display: flex;
-  gap: 70px;
-}
+  .header-box2-bg-header-img {
+    height: 100%;
+  }
 
 
-}
+  .header-list-link {
+    font-size: 27px;
+  }
 
-
-
-
-
-
-
-.footer-container-sponsor .swiper {
-    /* Высота ровно под один логотип */
-    height: 350px !important; 
-    width: 400px;
-    overflow: hidden;
-    margin-left: auto; /* Прижать вправо */
-    position: relative;
-    right: 0px;
-    top: 0px;
-}
-
-.footer-container-sponsor .swiper-wrapper {
+  .header-list {
+    gap: 35px;
+    margin-right: 60px;
     display: flex;
-    flex-direction: column;
-}
+    margin-left: 90px;
+    flex-wrap: wrap;
+  }
 
-.footer-container-sponsor .swiper-slide {
-    height: 350px !important; /* Должна совпадать с высотой swiper */
+  .footer-container {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    gap: 70px;
+  }
 
-.footer-container-sponsor .swiper-slide img {
-    max-height: 350px; /* Чтобы логотип не касался границ */
-    width: auto;
-    object-fit: contain;
-    display: block;
-    
 
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1497,65 +1733,69 @@ body.has-fixed-header {
 
 /* Основні стилі списку */
 .header-list {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
 .header-list-item {
-    position: relative;
+  position: relative;
 }
 
 .link-wrapper {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 /* Стиль іконки (стрілочки) */
 .toggle-icon {
-    position: relative;
-    width: 12px;
-    height: 12px;
-    margin-left: 5px;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
 }
 
 .toggle-icon::before,
 .toggle-icon::after {
-    content: "";
-    position: absolute;
-    background-color: #000; /* Колір ліній */
-    transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  background-color: #000;
+  /* Колір ліній */
+  transition: all 0.3s ease;
 }
 
 /* Малюємо стрілочку куточком вниз */
 .toggle-icon::before {
-    width: 2px;
-    height: 8px;
-    left: 3px;
-    transform: rotate(-45deg);
+  width: 2px;
+  height: 8px;
+  left: 3px;
+  transform: rotate(-45deg);
 }
+
 .toggle-icon::after {
-    width: 2px;
-    height: 8px;
-    right: 3px;
-    transform: rotate(45deg);
+  width: 2px;
+  height: 8px;
+  right: 3px;
+  transform: rotate(45deg);
 }
 
 /* Стан Хрестика (активується через клас .active) */
 .has-dropdown.active .toggle-icon::before {
-    transform: rotate(45deg);
-    left: 5px;
+  transform: rotate(45deg);
+  left: 5px;
 }
+
 .has-dropdown.active .toggle-icon::after {
-    transform: rotate(-45deg);
-    right: 5px;
+  transform: rotate(-45deg);
+  right: 5px;
 }
 
 /* Стилі випадаючого блоку */
 .dropdown-menu {
   position: absolute;
-  top: 110%; /* Трішки нижче від пункту */
+  top: 110%;
+  /* Трішки нижче від пункту */
   left: 0;
   background: #161f30;
   padding: 15px;
@@ -1575,15 +1815,114 @@ body.has-fixed-header {
 .has-dropdown.active .dropdown-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0); /* Повертається на місце */
+  transform: translateY(0);
+  /* Повертається на місце */
 }
 
 
 .toggle-icon::before,
 .toggle-icon::after {
-    content: "";
-    position: absolute;
-    /* ЗАМІНІТЬ ЦЕЙ КОЛІР НА ВАШ */
-    background-color: #E0A458; /* Наприклад, помаранчевий */
-    transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  /* ЗАМІНІТЬ ЦЕЙ КОЛІР НА ВАШ */
+  background-color: #E0A458;
+  /* Наприклад, помаранчевий */
+  transition: all 0.3s ease;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* cookie */
+
+
+
+.cookie-box {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  font-family: Inter;
+  visibility: hidden;
+  /* Скрыт по умолчанию до проверки скриптом */
+}
+
+
+
+
+
+
+
+
+.cookie-box button {
+  background: #0b8d97;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Inter;
+}
+
+.cookie-box button:hover {
+  background: #45a049;
+}
+
+
+
+.sponsors-flex {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+
+
+.sponsor-item img {
+    width: 90px; 
+    height: 90px;
+    border-radius: 4px;
+}
+
+.hero-section{
+  height: 800px;
+}
+
+
+
+
+
+
+
