@@ -905,7 +905,7 @@ body.has-fixed-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
+
     padding: 10px;
 }
 
@@ -913,22 +913,10 @@ body.has-fixed-header {
     width: 200px; 
     height: 120px;
 
-    filter: grayscale(100%); /* Можна зробити чорно-білими */
-    transition: 0.3s;
+
     object-fit: contain;
 }
 
-.sponsor-item img:hover {
-    filter: grayscale(0%); /* Кольорові при наведенні */
-
-
-
-
-
-
-    width: 240px; 
-    height: 160px;
-}
 
 
 
