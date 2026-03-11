@@ -739,3 +739,9 @@ async function loadU17GroupData() {
 window.addEventListener('load', () => {
     loadU17GroupData();
 }); 
+
+
+
+
+
+

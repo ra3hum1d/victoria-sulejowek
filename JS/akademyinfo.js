@@ -311,3 +311,6 @@ async function loadInformacjeOAkademii() {
 window.addEventListener('load', () => {
     loadInformacjeOAkademii();
 }); 
+
+
+

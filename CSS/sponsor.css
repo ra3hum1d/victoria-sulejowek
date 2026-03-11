@@ -890,69 +890,87 @@ body.has-fixed-header {
 
 
 
-/* Основна секція */
 .sponsors-section {
     padding: 60px 0;
-    text-align: center; /* Центрує все всередині */
+    background-color: #1a2a44; /* Колір фону як на сайті */
 }
 
-/* ЗАГОЛОВКИ */
 .sponsor-group {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
+    text-align: center;
 }
 
 .group-title {
     color: #ffffff;
-    font-size: 28px;
+    font-size: 36px;
     text-transform: uppercase;
-    margin-bottom: 30px;
-    display: block; /* Займає весь рядок */
-    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
 }
 
-/* СІТКА */
 .sponsors-flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Центрує логотипи в ряду */
+    justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
 }
 
-/* КАРТКИ СПОНСОРІВ */
+/* Звичайні білі картки */
 .sponsor-item {
     background: #fff;
-    padding: 10px;
-    width: 140px; 
+            border-radius: 10px;
+        border: 3px solid rgb(175, 159, 70);
+    width: 140px;
     height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .sponsor-item img {
-    max-width: 90%;
+    max-width: 50%;
     max-height: 90%;
     object-fit: contain;
 }
 
-/* ВЕЛИКИЙ ГЕРБ */
+/* ГЕРБ (ОРЕЛ) - ВЕЛИКИЙ ПО ЦЕНТРУ */
 .large-eagle {
-    width: 220px !important;
-    height: 180px !important;
+    width: 280px !important;
+    height: 220px !important;
+    order: -1; /* Виносить на початок, justify-content ставить по центру */
 }
 
-/* ВЕЛИКІ КАРТКИ ПАРТНЕРІВ (R-GOL та USPORTS) */
+/* ПАРТНЕРИ (R-GOL ТА U-SPORT) - ШИРОКІ БЛОКИ */
 #grid-technical .sponsor-item,
 #grid-media .sponsor-item {
-    width: 350px; /* Зробив так само великим, як на вашому скрині з R-Gol */
-    height: 200px;
+    width: 450px;
+    height: 280px;
 }
 
-#grid-technical img,
-#grid-media img {
-    max-width: 80%;
+
+
+/* ГЕРБ (ОРЕЛ) - ЧІТКО ПО ЦЕНТРУ */
+.large-eagle {
+    width: 280px !important;
+    height: 220px !important;
+    border: none;
+    flex: 0 0 100%; /* Змушує Герб займати всю ширину рядка */
+    background: transparent !important; /* Прибираємо білий фон, якщо потрібно як на схемі */
+    margin-bottom: 30px; /* Відступ від дрібних спонсорів знизу */
+    display: flex;
+    justify-content: center;
+
 }
+
+.large-eagle img {
+    max-width: 250px;
+    height: auto;
+        border-radius: 10px;
+        border: 3px solid rgb(175, 159, 70);
+}
+
 
 
 

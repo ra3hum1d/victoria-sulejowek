@@ -157,29 +157,29 @@ async function loadSponsors() {
             const imageUrl = sponsor._embedded?.['wp:featuredmedia']?.[0]?.source_url || '';
             if (!imageUrl) return;
 
+            // Беремо назву з WordPress (Tytuł)
             const title = (sponsor.title.rendered || "").toLowerCase();
-            const imgPath = imageUrl.toLowerCase();
+            const slug = (sponsor.slug || "").toLowerCase();
 
-            // 1. ПЕРЕВІРКА НА ГЕРБ (Орел)
-            const isEagle = title.includes('victoria') || title.includes('herb') || imgPath.includes('herb');
+            // 1. ПЕРЕВІРКА НА ГЕРБ (HERB) - великий по центру
+            const isEagle = title.includes('herb') || slug.includes('herb');
             
-            // Створюємо шаблон картки
             const itemHtml = `
                 <div class="sponsor-item ${isEagle ? 'large-eagle' : ''}">
                     <img src="${imageUrl}" alt="${sponsor.title.rendered}">
                 </div>
             `;
 
-            // 2. ЛОГІКА РОЗПОДІЛУ (як ви просили для R-Gol)
-            if (imgPath.includes('r-gol') || title.includes('r-gol')) {
+            // 2. РОЗПОДІЛ ЗА НАЗВАМИ З ВАШОГО WORDPRESS
+            if (slug.includes('r-gol') || title.includes('r-gol')) {
                 htmlTech += itemHtml;
             } 
-            else if (imgPath.includes('usports') || title.includes('usports')) {
-                // ТЕПЕР ВІН ГАРАНТОВАНО ПІДЕ СЮДИ
+            // Виправляємо на "u-sport" згідно з вашим скріншотом
+            else if (slug.includes('u-sport') || title.includes('u-sport')) {
                 htmlMedia += itemHtml;
             } 
             else {
-                htmlMain += itemHtml;
+                htmlMain += htmlMain.includes(itemHtml) ? '' : itemHtml;
             }
         });
 
@@ -188,8 +188,7 @@ async function loadSponsors() {
         grids.media.innerHTML = htmlMedia;
 
     } catch (e) {
-        console.error('Помилка:', e);
+        console.error('Помилка завантаження:', e);
     }
 }
-
 window.addEventListener('DOMContentLoaded', loadSponsors);
