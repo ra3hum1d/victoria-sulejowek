@@ -137,38 +137,59 @@ filter.addEventListener('click', () => {
 
 
 async function loadSponsors() {
-    const container = document.getElementById('sponsors-grid');
-    if (!container) return;
+    const grids = {
+        main: document.getElementById('grid-sponsors'),
+        tech: document.getElementById('grid-technical'),
+        media: document.getElementById('grid-media')
+    };
+
+    if (!grids.main) return;
 
     try {
-        // Додаємо _embed, щоб отримати посилання на зображення разом із даними спонсорів
-        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/sponsorzy?_embed&per_page=20');
+        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/sponsorzy?_embed&per_page=50');
         const sponsors = await response.json();
 
-        let html = '';
-        sponsors.forEach(sponsor => {
-            // Перевіряємо, чи є у спонсора встановлене головне зображення
-            const imageUrl = sponsor._embedded && 
-                             sponsor._embedded['wp:featuredmedia'] ? 
-                             sponsor._embedded['wp:featuredmedia'][0].source_url : 
-                             ''; // Порожньо, якщо картинки немає
+        let htmlMain = '';
+        let htmlTech = '';
+        let htmlMedia = '';
 
-            if (imageUrl) {
-                html += `
-                    <div class="sponsor-item">
-                        <img src="${imageUrl}" alt="${sponsor.title.rendered}" title="${sponsor.title.rendered}">
-                    </div>
-                `;
+        sponsors.forEach(sponsor => {
+            const imageUrl = sponsor._embedded?.['wp:featuredmedia']?.[0]?.source_url || '';
+            if (!imageUrl) return;
+
+            const title = (sponsor.title.rendered || "").toLowerCase();
+            const imgPath = imageUrl.toLowerCase();
+
+            // 1. ПЕРЕВІРКА НА ГЕРБ (Орел)
+            const isEagle = title.includes('victoria') || title.includes('herb') || imgPath.includes('herb');
+            
+            // Створюємо шаблон картки
+            const itemHtml = `
+                <div class="sponsor-item ${isEagle ? 'large-eagle' : ''}">
+                    <img src="${imageUrl}" alt="${sponsor.title.rendered}">
+                </div>
+            `;
+
+            // 2. ЛОГІКА РОЗПОДІЛУ (як ви просили для R-Gol)
+            if (imgPath.includes('r-gol') || title.includes('r-gol')) {
+                htmlTech += itemHtml;
+            } 
+            else if (imgPath.includes('usports') || title.includes('usports')) {
+                // ТЕПЕР ВІН ГАРАНТОВАНО ПІДЕ СЮДИ
+                htmlMedia += itemHtml;
+            } 
+            else {
+                htmlMain += itemHtml;
             }
         });
 
-        container.innerHTML = html;
+        grids.main.innerHTML = htmlMain;
+        grids.tech.innerHTML = htmlTech;
+        grids.media.innerHTML = htmlMedia;
+
     } catch (e) {
-        console.error('Błąd ładowania sponsorów:', e);
+        console.error('Помилка:', e);
     }
 }
 
-
-window.addEventListener('load', () => {
-    loadSponsors();
-}); 
+window.addEventListener('DOMContentLoaded', loadSponsors);

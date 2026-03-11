@@ -784,3 +784,144 @@ footer ul {
 
 
 .footer-img {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .active{
+    /* position: fixed; */
+    z-index: 10;
+    top: 25px;
+    height: 100%;
+    opacity: 1;
+    /* transition: 100s; */
+  }
+  /* .link-wrapper{
+    justify-content: center;
+  } */
+
+  @media (max-width: 768px) {
+  .active {
+    position: fixed;
+  }
+}
+
+
+
+.burger{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+}
+
+.burger span{
+width:30px;
+height:3px;
+background:white;
+display:block;
+}
+
+@media (max-width: 1024px){
+
+.header-list{
+position:fixed;
+top:0;
+right:-100%;
+width:320px;
+height:100vh;
+background:#111;
+flex-direction:column;
+padding:120px 30px;
+transition:0.3s;
+overflow-y:auto;
+}
+
+.header-list.active{
+right:0;
+}
+
+.burger{
+display:flex;
+z-index:1001;
+}
+
+.dropdown-menu{
+position:static;
+display:none;
+}
+
+.has-dropdown.active .dropdown-menu{
+display:block;
+}
+
+}

@@ -890,34 +890,69 @@ body.has-fixed-header {
 
 
 
+/* Основна секція */
+.sponsors-section {
+    padding: 60px 0;
+    text-align: center; /* Центрує все всередині */
+}
 
+/* ЗАГОЛОВКИ */
+.sponsor-group {
+    margin-bottom: 60px;
+}
+
+.group-title {
+    color: #ffffff;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    display: block; /* Займає весь рядок */
+    text-align: center;
+}
+
+/* СІТКА */
 .sponsors-flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px 0;
+    justify-content: center; /* Центрує логотипи в ряду */
+    align-items: center;
+    gap: 20px;
 }
 
+/* КАРТКИ СПОНСОРІВ */
 .sponsor-item {
-    width: 320px; /* Налаштуйте ширину під дизайн */
-    height: 240px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    background: #fff;
     padding: 10px;
+    width: 140px; 
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sponsor-item img {
-    width: 200px; 
-    height: 120px;
-
-
+    max-width: 90%;
+    max-height: 90%;
     object-fit: contain;
 }
 
+/* ВЕЛИКИЙ ГЕРБ */
+.large-eagle {
+    width: 220px !important;
+    height: 180px !important;
+}
 
+/* ВЕЛИКІ КАРТКИ ПАРТНЕРІВ (R-GOL та USPORTS) */
+#grid-technical .sponsor-item,
+#grid-media .sponsor-item {
+    width: 350px; /* Зробив так само великим, як на вашому скрині з R-Gol */
+    height: 200px;
+}
+
+#grid-technical img,
+#grid-media img {
+    max-width: 80%;
+}
 
 
 
