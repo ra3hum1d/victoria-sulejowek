@@ -154,11 +154,9 @@
 
 
 <main class="main-content">
-        <section class="info">
-            <div class="info-section-title-cont">
-                
-            </div>
-        </section>
+        <div class="bordered league">
+    <?php include "wp-content/themes/www-victoria-sulejowek/pobierz-tabele-2.php"; ?>
+</div>
     </main>
 
 
