@@ -40,6 +40,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+
 async function loadTeamSquad() {
     const container = document.getElementById('team-content');
     if (!container) return;
@@ -116,47 +120,7 @@ window.addEventListener('load', () => {
 
 
 
-async function initVerticalSponsorSlider() {
-    const wrapper = document.getElementById('sponsor-list');
-    if (!wrapper) return;
-    
-    try {
-        const response = await fetch('https://www.victoriasulejowek.pl/wp-json/wp/v2/sponsorzy?_embed');
-        if (!response.ok) return;
 
-        const sponsors = await response.json();
-        wrapper.innerHTML = ''; 
-
-        sponsors.forEach(sponsor => {
-            let imgUrl = '';
-            if (sponsor._embedded && sponsor._embedded['wp:featuredmedia']) {
-                imgUrl = sponsor._embedded['wp:featuredmedia'][0].source_url;
-            }
-            if (imgUrl) {
-                wrapper.innerHTML += `
-                    <div class="swiper-slide">
-                        <img src="${imgUrl}" alt="${sponsor.title.rendered}">
-                    </div>`;
-            }
-        });
-
-        new Swiper('.mySponsorSwiper', {
-            direction: 'vertical',
-            loop: true,
-            speed: 1000,
-            autoplay: { delay: 2000, disableOnInteraction: false },
-            slidesPerView: 1,
-            spaceBetween: 0,
-            allowTouchMove: false
-        });
-    } catch (e) { 
-        console.error('Błąd ładowania sponsorów:', e); 
-    }
-}
-
-window.addEventListener('load', () => {
-    initVerticalSponsorSlider();
-});
 
 
 
@@ -224,33 +188,69 @@ window.addEventListener('load', () => {
 
 
 
-// Знаходимо сам фільтр (додаємо крапку!)
 const filter = document.querySelector('.blur-filter');
-// Знаходимо всі кнопки меню
 const menuToggles = document.querySelectorAll('.has-dropdown .link-wrapper');
 
 menuToggles.forEach(item => {
     item.addEventListener('click', (e) => {
-        e.preventDefault();
-        const parent = item.parentElement;
-        
-        // Перемикаємо стан активності для пункту меню (стрілочка/хрестик)
-        parent.classList.toggle('active');
 
-        // Логіка для фільтра: 
-        // Перевіряємо, чи є хоча б одне відкрите меню
-        const anyActive = document.querySelector('.has-dropdown.active');
-        
-        if (anyActive) {
-            filter.classList.add('show'); // Показуємо чорний фон
-        } else {
-            filter.classList.remove('show'); // Ховаємо, якщо все закрито
+        e.preventDefault();
+
+        const parent = item.parentElement;
+        const isActive = parent.classList.contains('active');
+
+        // закрываем все меню
+        document.querySelectorAll('.has-dropdown').forEach(el => {
+            el.classList.remove('active');
+        });
+
+        // если текущее не было открыто — открываем его
+        if (!isActive) {
+            parent.classList.add('active');
         }
+
+        const anyActive = document.querySelector('.has-dropdown.active');
+
+        if (anyActive) {
+
+            filter.classList.add('show');
+            document.documentElement.style.overflow = 'hidden';
+
+        } else {
+
+            filter.classList.remove('show');
+            document.documentElement.style.overflow = '';
+
+        }
+
     });
 });
 
-// Додатково: закривати меню при кліку на сам фільтр
+// закрытие по клику на фон
 filter.addEventListener('click', () => {
-    document.querySelectorAll('.has-dropdown').forEach(el => el.classList.remove('active'));
+
+    document.querySelectorAll('.has-dropdown').forEach(el =>
+        el.classList.remove('active')
+    );
+
     filter.classList.remove('show');
+    document.documentElement.style.overflow = '';
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

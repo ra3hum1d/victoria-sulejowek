@@ -474,15 +474,6 @@ menuToggles.forEach(item => {
     });
 });
 
-
-
-
-
-
-
-
-
-
 // закрытие по клику на фон
 filter.addEventListener('click', () => {
 
@@ -498,21 +489,13 @@ filter.addEventListener('click', () => {
 
 
 
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('.header-list');
 
-burger.addEventListener('click', () => {
 
-burger.classList.toggle('active');
-menu.classList.toggle('active');
 
-if(menu.classList.contains('active')){
-document.documentElement.style.overflow = 'hidden';
-}else{
-document.documentElement.style.overflow = '';
-}
 
-});
+
+
+
 
 
 
