@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 html,
 body {
     margin: 0;
@@ -933,9 +935,9 @@ body.has-fixed-header {
 /* Стилі для параграфів, які отримали клас через JS */
 .akademia-info-paragraph {
     text-decoration: none;
-    font-family: Bebas Neue;
+    font-family: Inter;
     font-size: 25px;
-    color: #d3d69b;
+    color: #ffffff;
     transition: 0.3s;
 }
 
@@ -947,10 +949,44 @@ body.has-fixed-header {
     font-size: 22px;
 }
 
+@media (max-width: 738px) {
+    .akademia-info-paragraph {
+    text-decoration: none;
+    font-family: Inter;
+    font-size: 18px;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.akademia-info-paragraph a{
+
+    font-family: Inter;
+    font-size: 18px;
+    color: #347cda;
+    transition: 0.3s;
+}
+
+.akademia-info-card{
+    width: 90%;
+}
+
+#akademia-info-content{
+    margin-left: -20px;
+}
+
+
+
+}
 
 
 
 
+.akademia-info-paragraph a{
+
+    font-family: Inter;
+    color: #347cda;
+    transition: 0.3s;
+}
 
 
 
@@ -1095,7 +1131,7 @@ body.has-fixed-header {
     gap: 40px;
     align-items: center;
 
-  height: 60vh;
+  
   min-height: 300px;
   margin-top: 200px;
   background-position: center;

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 html, body {
   margin: 0;
   padding: 0;
@@ -841,21 +843,37 @@ hr{
 
 #regulaminy-section {
     padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-content{
+    display: flex;
+    justify-content: center;
+  flex-direction: column;
 }
 
 .regulaminy-card {
-    background: #fff;
+    background: #232a3f;
     padding: 30px;
     border: 1px solid #eee;
     border-radius: 4px;
+    width: 90%;
+
 }
 
 .regulaminy-title {
-    color: #0056b3;
+    color: #ffffff;
+      font-family: Bebas Neue;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px;
     font-size: 26px;
+}
+
+.regulaminy-body p{
+  font-family: Inter;
+  color: white;
 }
 
 .regulaminy-body {
@@ -1022,7 +1040,7 @@ hr{
     gap: 40px;
     align-items: center;
 
-  height: 60vh;
+  
   min-height: 300px;
   margin-top: 200px;
   background-position: center;

@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 html,
 body {
     margin: 0;
@@ -841,13 +844,16 @@ body.has-fixed-header {
     border: 5px outset #347ac5;
     text-transform: uppercase;
     margin-top: 20px !important;
-    font-family: Bebas Neue;
-    font-size: 35px;
-    color: #eebf81;
+    font-family: Inter;
+    font-size: 25px;
+    color: rgb(199, 172, 121);
     margin-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
 }
+
+
+
 
 /* Головний заголовок секції */
 #results-container h2 {
@@ -1209,7 +1215,7 @@ border: 3px solid  #977c58 ;
     gap: 40px;
     align-items: center;
 
-  height: 60vh;
+  
   min-height: 300px;
   margin-top: 200px;
   background-position: center;
@@ -1505,3 +1511,14 @@ border: 3px solid  #977c58 ;
 
 
 }
+
+
+
+
+
+table{
+        color: rgb(187, 216, 25);
+
+}
+
+

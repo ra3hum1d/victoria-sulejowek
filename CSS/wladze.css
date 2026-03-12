@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -1423,7 +1428,7 @@ body.has-fixed-header {
     text-decoration: none;
     font-family: Bebas Neue;
     font-size: 37px;
-    color: #4e6cf5;
+    color: #2a6dd3;
     margin-bottom: 20px;
     border-bottom: 2px solid #f0f0f0;
     padding-bottom: 10px;
@@ -1439,7 +1444,7 @@ body.has-fixed-header {
     text-decoration: none;
     font-family: Bebas Neue;
     font-size: 32px;
-    color: #ffffff;
+    color: #dbe03f;
     transition: 0.3s;
     text-align: justify;
 }
@@ -1463,7 +1468,7 @@ body.has-fixed-header {
     text-decoration: none;
     font-family: Bebas Neue;
     font-size: 27px;
-    color: #cfd19e;
+    color: #7aa3e0;
     transition: 0.3s;
     text-align: justify;
 }
@@ -1618,7 +1623,7 @@ body.has-fixed-header {
     gap: 40px;
     align-items: center;
 
-  height: 60vh;
+  
   min-height: 300px;
   margin-top: 200px;
   background-position: center;

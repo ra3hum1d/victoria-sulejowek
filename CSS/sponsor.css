@@ -1102,12 +1102,51 @@ body.has-fixed-header {
     gap: 40px;
     align-items: center;
 
-  height: 60vh;
+  
   min-height: 300px;
   margin-top: 200px;
   background-position: center;
 }
-  }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+
+}
+
+.sponsors-section{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.sponsor-group{
+    margin-left: -45px;
+}
+}
+
+
+
+
+@media (max-width: 320px) {
+    .sponsor-group{
+    margin-left: 0px;
+}
+}
+
+
+
+@media (max-width: 386px) {
+    .sponsor-group{
+    margin-left: 10px;
+}
+
+.sponsors-flex{
+    margin-left: 20px;
+}
+}
 
 
 

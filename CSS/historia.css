@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 html,
 body {
     margin: 0;
@@ -809,9 +812,9 @@ body.has-fixed-header {
     margin: 0 auto;
     line-height: 1.8;
     text-decoration: none;
-    font-family: Bebas Neue;
+    font-family: Inter;
     font-size: 27px;
-    color: #cfd19e;
+    color: #ffffff;
     transition: 0.3s;
     text-align: justify;
     /* Текст історії краще виглядає вирівняним по ширині */
@@ -825,7 +828,7 @@ body.has-fixed-header {
     text-decoration: none;
     font-family: Bebas Neue;
     font-size: 37px;
-    color: #4e6cf5;
+    color: #2a6dd3;
     margin-bottom: 20px;
     border-bottom: 2px solid #f0f0f0;
     padding-bottom: 10px;
@@ -992,17 +995,76 @@ body.has-fixed-header {
 /* ---- FOOTER ---- */
 
 @media (max-width: 768px) {
+
+    strong{
+        width: 100%;
+    }
+
     .footer-container {
         flex-direction: column;
         gap: 40px;
         align-items: center;
 
-        height: 60vh;
+        
         min-height: 300px;
         margin-top: 200px;
         background-position: center;
     }
+
+
+
+
+
+
+
+#history-section {
+
+    
+    background-color: #161f30;
+
 }
+
+.history-text {
+    padding-right: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-decoration: none;
+    font-family: Inter;
+    font-size: 17px;
+    color: #ffffff;
+    transition: 0.3s;
+    text-align: justify;
+    /* Текст історії краще виглядає вирівняним по ширині */
+}
+
+/* Стиль для головного заголовка "HISTORIA MLKS VICTORII..." */
+.history-text h1,
+.history-text strong:first-of-type {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: Bebas Neue;
+    font-size: 37px;
+    color: #2a6dd3;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.history-text p {
+    margin-bottom: 20px;
+}
+
+
+}
+
+
+
+
+
 
 
 

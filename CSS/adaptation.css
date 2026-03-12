@@ -2406,11 +2406,56 @@ footer ul {
 
 
 
-@media (min-width: 770px) and (max-width: 924px) {
+@media (min-width: 387px) and (max-width: 768px) {
+
+.hero-match-inside{
+  width: 96%;
+}
+
+.hero-match-inside-jun{
+  width: 96%;
+  height: 96%;
+  padding-bottom: 15px;
+}
 
 
+.hero-match-container-jun{
+  margin-bottom: 100px;
+  height: 400px;
+}
+
+.ball-svg{
+  margin-left: 37%;
+  
+}
+
+.stadion-svg{
+    margin-left: 37%;
+}
+
+.ball-svg-jun{
+      margin-left: 41%;
+}
+
+.stadion-svg-jun{
+  margin-left: 41%;
+}
+
+.junior-v2-text{
+  text-align: center;
+}
+
+.match-details{
+  margin-left: 10px;
+}
 
 }
+
+
+
+
+
+
 
 
   .active{

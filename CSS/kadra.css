@@ -738,40 +738,7 @@ body.has-fixed-header {
 
 
 
-.footer-container-sponsor .swiper {
-  /* Высота ровно под один логотип */
-  height: 350px !important;
-  width: 400px;
-  overflow: hidden;
-  margin-left: auto;
-  /* Прижать вправо */
-  position: relative;
-  right: 0px;
-  top: 0px;
-}
 
-.footer-container-sponsor .swiper-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-container-sponsor .swiper-slide {
-  height: 350px !important;
-  /* Должна совпадать с высотой swiper */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-container-sponsor .swiper-slide img {
-  max-height: 350px;
-  /* Чтобы логотип не касался границ */
-  width: auto;
-  object-fit: contain;
-  display: block;
-
-
-}
 
 
 
@@ -1015,7 +982,7 @@ body.has-fixed-header {
     gap: 40px;
     align-items: center;
 
-  height: 60vh;
+
   min-height: 300px;
   margin-top: 200px;
   background-position: center;

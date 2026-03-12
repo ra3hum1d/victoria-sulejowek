@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -854,7 +857,17 @@ hr{
     font-weight: bold;
     
 }
+@media (max-width: 728px) {
+  .akademia-card{
+    padding-left: 0px;
+  }
 
+  .akademia-body p {
+    margin-bottom: 20px;
+    font-size: 19px;
+    font-family: Inter;
+}
+}
 .akademia-body {
     line-height: 1.8;
     color: #444;
@@ -865,6 +878,12 @@ hr{
 
 .akademia-body p {
     margin-bottom: 20px;
+    font-family: Inter;
+}
+
+.akademia-body a {
+    margin-bottom: 20px;
+    color: #0056b3;
 }
 
 .akademia-body {
@@ -1029,7 +1048,7 @@ hr{
     gap: 40px;
     align-items: center;
 
-  height: 60vh;
+  
   min-height: 300px;
   margin-top: 200px;
   background-position: center;

@@ -953,6 +953,7 @@ body.has-fixed-header {
   font-size: 35px;
   color: #eebf81;
   margin-top: 30px;
+
 }
 
 .second-staff-title-cont {
@@ -973,6 +974,7 @@ body.has-fixed-header {
   font-size: 35px;
   color: #eebf81;
   margin-top: 30px;
+    text-align: center;
 }
 
 
@@ -1121,7 +1123,7 @@ body.has-fixed-header {
     gap: 40px;
     align-items: center;
 
-  height: 60vh;
+  
   min-height: 300px;
   margin-top: 200px;
   background-position: center;
