@@ -26,7 +26,7 @@ const btn = document.querySelector('.play-video-button')
 btn.addEventListener('click',()=>{
   box.innerHTML = `
     <iframe width="100%" height="944px" 
-      src="https://www.youtube.com/embed/z8gu9TthcAQ?autoplay=1" 
+      src="" 
       title="YouTube video player" 
       frameborder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -286,7 +286,7 @@ async function loadJuniorMatchContent() {
 
             container.innerHTML = `
                 <div class="junior-v2-box">
-                    <p class="junior-v2-text">${matchText}</p>
+                    <p class="junior-v2-text junior-v2-text2">${matchText}</p>
                 </div>
             `;
         }
@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const box = document.querySelector('.video-cont');
     if (btn && box) {
         btn.addEventListener('click', () => {
-            box.innerHTML = `<iframe width="100%" height="944px" src="https://www.youtube.com/embed/z8gu9TthcAQ?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+            box.innerHTML = `<iframe width="100%" height="944px" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
         });
     }
 

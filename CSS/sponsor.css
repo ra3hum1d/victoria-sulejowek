@@ -902,7 +902,8 @@ body.has-fixed-header {
 
 .group-title {
     color: #ffffff;
-    font-size: 36px;
+    font-family: Roboto;
+    font-size: 31px;
     text-transform: uppercase;
     margin-bottom: 40px;
     font-weight: bold;
@@ -945,8 +946,8 @@ body.has-fixed-header {
 /* ПАРТНЕРИ (R-GOL ТА U-SPORT) - ШИРОКІ БЛОКИ */
 #grid-technical .sponsor-item,
 #grid-media .sponsor-item {
-    width: 450px;
-    height: 280px;
+    width: 140px;
+    height: 140px;
 }
 
 
